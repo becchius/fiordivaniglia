@@ -48,6 +48,7 @@
 
     .block-title {
         border-bottom: 0;
+        border-top:0;
         padding: 3px 0;
     }
 
@@ -62,7 +63,7 @@
 
     .links {
         float: left;
-        width: 17%;
+        width: 24%;
         padding: 0 $trim 0 0;
         margin-bottom: $trim;
 
@@ -189,12 +190,14 @@
     }
 
     address {
-        border-top: 1px solid $c-module-border;
+        border-top: 0;
         text-align: center;
         width: 100%;
         font-size: $f-size-xxs;
         margin-top: $trim;
-        padding: $trim 0;
+        padding: 15px 0;
+        background-color: $c-action;
+        color:$c-text-white;
     }
 
     @include bp(max-width, $bp-xlarge) {

@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: andrea.becchio
+ * Date: 19/12/2015
+ * Time: 22:55
+ */
+$banner1 = $this->getLayout()->getBlock('hp_banner_left')->toHtml();
+$banner2 = $this->getLayout()->getBlock('hp_banner_right')->toHtml();
+?>
+<ul class="promos">
+
+<li>
+   <?php echo $banner1;?>
+</li>
+<li>
+   <?php echo $banner2;?>
+</li>
+
+</ul>
+

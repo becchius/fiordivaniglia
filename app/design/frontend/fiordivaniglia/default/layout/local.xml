@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <default>
+        <reference name="footer">
+            <remove name="footer_links"/>
+            <remove name="footer_links2"/>
+
+            <block type="cms/block" name="cms_footer_links_shop" after="cms_footer_links">
+                <!--
+                    The content of this block is taken from the database by its block_id.
+                    You can manage it in admin CMS -> Static Blocks
+                -->
+                <action method="setBlockId"><block_id>footer_links_shop</block_id></action>
+            </block>
+        </reference>
+    </default>
+    <cms_index_index>
+        <reference name="cms_page">
+            <block type="core/text_list" name="hp_slider" as="hp_slider" translate="label">
+                <label>Slider</label>
+            </block>
+            <block type="core/text_list" name="hp_banner_left" as="hp_banner_left" translate="label">
+                <label>HP banner Left</label>
+            </block>
+            <block type="core/text_list" name="hp_banner_right" as="hp_banner_right" translate="label">
+                <label>HP banner Right</label>
+            </block>
+            <block type="core/text_list" name="hp_product_list" as="hp_product_list" translate="label">
+                <label>HP product list</label>
+            </block>
+        </reference>
+    </cms_index_index>
+</layout>

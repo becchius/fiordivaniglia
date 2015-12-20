@@ -159,14 +159,15 @@ body .promos > li {
 
     /* Config: Three columns + flexible gutter */
     // Container: 480 - (2 * 30 trim wide) = 420
-    // Math: (420 - (2 * 10 gutter)) / 3 items = 133.333333333
+    // Math: (420 - (2 * 10 gutter)) / 2 items = 133.333333333
     body .promos > li {
         float: left;
-        width: percentage(133.333333333 / 420);
-        margin-right: percentage(10 / 420);
+        width: percentage(200 / 410);
+        margin-right: percentage(10 / 410);
+        height: $hp_banner_height;
     }
 
-    .promos > li:nth-child(3n) {
+    .promos > li:nth-child(2n) {
         margin-right: 0;
     }
 }
@@ -206,3 +207,24 @@ body .promos > li {
 .cms-index-noroute h2.subtitle {
     display: none;
 }
+
+//Slider
+.std ul.products-grid li {
+    list-style: none;
+    margin-left: 0;
+}
+.std ul.products-grid li .product-info {
+    padding-bottom: 0 !important;
+    min-height: 0 !important;
+}
+.std .widget-new-products h2 {
+    text-align: center;
+    color: $c-action;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.std .widget-new-products .products-grid .product-image{
+    width: 100%;
+    margin-left: 0px;
+}
+

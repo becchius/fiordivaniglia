@@ -143,11 +143,12 @@ body .promos > li {
 /* Config: Three columns + flexible gutter */
 body .promos > li {
   float: left;
-  width: 31.74603%;
-  margin-right: 2.38095%;
+  width: 48.78049%;
+  margin-right: 2.43902%;
+  height: 320px;
 }
 
-.promos > li:nth-child(3n) {
+.promos > li:nth-child(2n) {
   margin-right: 0;
 }
 
@@ -182,4 +183,26 @@ body .promos > li {
 
 .cms-index-noroute h2.subtitle {
   display: none;
+}
+
+.std ul.products-grid li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.std ul.products-grid li .product-info {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+
+.std .widget-new-products h2 {
+  text-align: center;
+  color: #F09E8F;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.std .widget-new-products .products-grid .product-image {
+  width: 100%;
+  margin-left: 0px;
 }
