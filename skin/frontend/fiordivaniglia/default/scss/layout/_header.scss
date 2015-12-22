@@ -234,7 +234,7 @@ a.skip-link {
 @include bp(max-width, $bp-medium) {
 
     .skip-link.skip-active {
-        background: #EDEDED;
+        background-color: $c-module-background;
         color: inherit;
     }
 
@@ -296,7 +296,7 @@ a.skip-link {
 
 .skip-content.skip-active {
     display: block;
-    background: #EDEDED;
+    background-color: $c-module-background;
 }
 
 /* ============================================ *

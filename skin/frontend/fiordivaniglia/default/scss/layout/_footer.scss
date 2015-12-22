@@ -39,12 +39,6 @@
 .footer {
     clear: both;
     width: 100%;
-    border-top: 1px solid $c-module-border;
-    padding-top: $trim;
-
-    @include bp(max-width, $bp-xsmall) {
-        padding-top: $trim-small;
-    }
 
     .block-title {
         border-bottom: 0;
@@ -63,15 +57,18 @@
 
     .links {
         float: left;
-        width: 24%;
-        padding: 0 $trim 0 0;
+        width: 20%;
+        margin-left: 13%;
+        padding: 0 0 0 0;
         margin-bottom: $trim;
+
 
         li {
             word-break: break-all;
             line-height: 1.4;
             padding: 4px 0;
         }
+
 
         a {
             color: $c-text;
@@ -80,11 +77,29 @@
             }
         }
     }
-
+    .links:first-of-type {
+        margin-left: 0;
+    }
     .block-subscribe {
-        float: right;
-        width: 320px;
-        margin-bottom: $trim;
+        float: left;
+        width: 100%;
+        padding-bottom: $trim;
+        text-align: center;
+        background-color: $c-module-background;
+        padding-top: $trim;
+
+
+    }
+    .block-subscribe .privacy-box{
+        text-transform: none;
+        font-size: $f-size-xs;
+        margin-top:10px;
+        width: 100%;
+        display: inline-block;
+
+    }
+    .block-subscribe .privacy-box .checkbox{
+        vertical-align: middle;
     }
 
     .links,
@@ -94,7 +109,8 @@
     }
 
     .form-subscribe-header {
-        display: none;
+        display: block;
+        margin-bottom: 10px;
     }
 
     /* -------------------------------------------- *
@@ -143,8 +159,9 @@
     }
 
     .block-subscribe .input-text {
-        width: 100%;
+        width: 55%;
         border-right: 0;
+        float: right;
         @include border-radius(0);
     }
 
@@ -201,18 +218,15 @@
     }
 
     @include bp(max-width, $bp-xlarge) {
-        $links-trim: percentage(30px / 960px);
-        $links-width: (100 - ($links-trim * 3)) / 4;
+        $links-trim: 10%;
+        $links-width: 20%;
 
         .links {
             width: $links-width;
             padding-right: 0;
-            margin-right: $links-trim;
+            margin-left: $links-trim;
         }
 
-        .links:nth-child(4) {
-            margin-right: 0;
-        }
 
         .block-subscribe {
             clear: both;
@@ -230,22 +244,28 @@
 
     @include bp(max-width, $bp-small) {
         $links-trim: percentage(15px / 480px);
-        $links-width: (100 - $links-trim) / 2;
+        $links-width: 100%;
 
         .links {
             width: $links-width;
             margin-right: 0;
+            text-align: center;
+            margin-left: 0;
         }
 
-        .links:nth-child(odd) {
-            margin-right: $links-trim;
-            clear: both;
-        }
+
 
         .block-subscribe {
             clear: both;
             float: left;
             width: 100%;
+            text-align: center;
+        }
+
+        .block-subscribe .input-text {
+            width: 93%;
+            margin: 0;
+
         }
     }
 }

@@ -219,6 +219,7 @@ $nav-primary-height: 30px;
 
         .menu-active {
             z-index: 200;
+            background-color: $c-module-background;
         }
 
         /* Default styles for 1+ drop-down menus */

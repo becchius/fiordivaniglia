@@ -145,7 +145,6 @@ body .promos > li {
   float: left;
   width: 48.78049%;
   margin-right: 2.43902%;
-  height: 320px;
 }
 
 .promos > li:nth-child(2n) {
@@ -175,7 +174,7 @@ body .promos > li {
 .cms-index-index h2.subtitle {
   padding: 6px 0;
   text-align: center;
-  color: #F09E8F;
+  color: #CBA9CB;
   font-weight: 600;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #CCCCCC;
@@ -197,7 +196,7 @@ body .promos > li {
 
 .std .widget-new-products h2 {
   text-align: center;
-  color: #F09E8F;
+  color: #CBA9CB;
   font-weight: bold;
   margin-bottom: 10px;
 }

@@ -27,6 +27,7 @@
  * Homepage
  * ============================================ */
 
+
 /* -------------------------------------------- *
  * Primary Banner
  */
@@ -159,14 +160,14 @@ body .promos > li {
 
     /* Config: Three columns + flexible gutter */
     // Container: 480 - (2 * 30 trim wide) = 420
-    // Math: (420 - (2 * 10 gutter)) / 3 items = 133.333333333
+    // Math: (420 - (2 * 10 gutter)) / 4 items = 100
     body .promos > li {
         float: left;
-        width: percentage(133.333333333 / 420);
+        width: percentage(100 / 420);
         margin-right: percentage(10 / 420);
     }
 
-    .promos > li:nth-child(3n) {
+    .promos > li:nth-child(2n) {
         margin-right: 0;
     }
 }

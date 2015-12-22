@@ -194,11 +194,11 @@ $productsGridActionHeight: 85px;
 @include bp(min-width, $bp-xsmall + 1) {
     /* Config: Three columns + flexible gutter */
     // Container: 600 - (2 * 30 trim wide) = 540
-    $column-count: 3;
+    $column-count: 2;
     $column-gutters: 2;
     $container: 600 - (2 * $trim);
 
-    // Math: (540 - (2 * 30 gutter)) / 3 items = 160
+    // Math: (540 - (2 * 30 gutter)) / 2 items = 240
     $column-width: ($container - ($column-gutters * $product-column-spacing)) / $column-count;
 
     .products-grid {
@@ -213,7 +213,7 @@ $productsGridActionHeight: 85px;
         /* Set three-column config */
         > li {
             width: percentage($column-width / $container);
-            margin-right: percentage($product-column-spacing / $container);
+            margin-right: percentage(2*$product-column-spacing / $container);
         }
         > li:nth-child(#{$column-count}n+1) {
             clear: left;

@@ -28,6 +28,6 @@
 // =============================================
 
 @mixin menu {
-    background: #FBFBFB;
+    background: $c-module-background;
     border: solid 1px $c-module-border;
 }
