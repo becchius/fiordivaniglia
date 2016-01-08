@@ -72,10 +72,11 @@ $box-spacing: 10px;
 
 // Standard spacing between elements within a box, such as "Add to cart", "Price box", etc
 $element-spacing: 7px;
+$element-spacing-large: 15px;
 
 // Dimensions
 
-$max-content-width: 1200px;
+$max-content-width: 1860px;
 $max-container-width: $trim + $max-content-width + $trim;
 $max-std-formatted-width: 50em;
 
@@ -106,6 +107,7 @@ $c-text-gray: #A0A0A0;
 $c-text-white: #FBFBFB;
 // Primary font color for headings and other non-link text
 $c-text-primary: $c-pink;
+$c-text-primary-title: darken($c-text-primary,15%);
 
 
 // Interaction
@@ -137,15 +139,15 @@ $c-divider-border: #ECECEC;
 
 // Buttons
 
-$c-button: $c-pink;
-$c-button-hover: darken($c-pink, 5%);
-$c-button-active: darken($c-pink, 10%);
+$c-button: #a9abcb;
+$c-button-hover: darken($c-button, 5%);
+$c-button-active: darken($c-button, 10%);
 
 // Secondary Buttons
 
-$c-button-secondary: #DDDDDD;
-$c-button-secondary-hover: darken(#DDDDDD, 5%);
-$c-button-secondary-active: darken(#DDDDDD, 10%);
+$c-button-secondary: $c-pink;
+$c-button-secondary-hover: darken($c-button-secondary, 5%);
+$c-button-secondary-active: darken($c-button-secondary, 10%);
 
 $c-button-subtle: #ECECEC;
 
@@ -179,7 +181,7 @@ $c-link-active: darken($c-action, (5% / 2));
 
 $c-module-background: #FBF8FB;
 $c-module-background-hover: shade($c-module-background, 3%);
-$c-module-background-secondary: #EAF8FF;
+$c-module-background-secondary: lighten(#a9abcb,20%);
 $c-module-background-dark: #AAAAAA;
 // This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
 $c-module-border: #CCCCCC;
@@ -191,8 +193,8 @@ $c-module-border-highlight: $c-pink;
 
 // Table
 
-$c-table-background: #F4F4F4;
-$c-table-border: #C0C0C0;
+$c-table-background: #FBF8FB;
+$c-table-border: #CCCCCC;
 
 $c-table-zebra-odd: #F8F7F5;
 $c-table-zebra-even: #EEEDED;

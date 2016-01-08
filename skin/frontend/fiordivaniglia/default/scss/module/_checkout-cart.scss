@@ -29,16 +29,22 @@
 
 .cart-table {
     float: left;
-    width: 60%;
+    width: 100%;
 }
 
 .cart .button {
     white-space: normal;
 }
-
-.cart-forms,
+.crosssell{
+    float: left;
+    width: 100%;
+}
+.cart-forms{
+    float: left;
+    width: 40%;
+}
 .cart-totals-wrapper,
-.crosssell {
+{
     float: right;
     clear: right;
     width: 40%;
@@ -84,16 +90,18 @@
     .crosssell {
         padding-left: $box-spacing;
     }
-
+    .crosssell {
+        width: 100%;
+    }
     .cart-forms,
     .cart-totals-wrapper,
-    .crosssell {
+    {
         width: 50%;
     }
 
     .crosssell {
-        clear: right;
-        float: right;
+        clear: left;
+        float: left;
     }
 }
 
@@ -217,7 +225,19 @@
         }
     }
 }
-
+.btn-checkout {
+    font-size: 15px;
+}
+.btn-empty span span{
+    color: $c-text;
+}
+.btn-empty{
+    background-color: $c-button-subtle;
+    color: $c-text;
+    &:hover{
+        background-color: darken($c-button-subtle,15%);
+    }
+}
 .cart-totals .checkout-types .btn-checkout {
     margin-bottom: 7px;
 }
@@ -778,7 +798,7 @@
             border-top: 1px solid #E6E6E6;
             border-bottom: 1px solid #E6E6E6;
             td {
-                font-size: 24px;
+                font-size: 20px;
                 padding: 2px 5px;
                 vertical-align: top;
             }
@@ -883,12 +903,13 @@
 
 .crosssell {
     h2 {
-        color: $c-blue;
+        color: $c-text-primary;
     }
 
     .item a.product-image {
         width: auto;
-        float: left;
+        float: none;
+
     }
 }
 
@@ -896,7 +917,7 @@
 @include bp(max-width, $bp-large) {
     .crosssell {
         .products-grid > li:nth-child(even),
-        .products-grid > li:nth-child(3n),
+        .products-grid > li:nth-child(4n),
         .products-grid > li {
             width: percentage(210 / 440);
             margin-right: percentage(20 / 440);
@@ -911,7 +932,7 @@
         }
 
         /* Undo three-column config */
-        .products-grid > li:nth-child(3n+1) {
+        .products-grid > li:nth-child(4n+1) {
             clear: none;
         }
     }

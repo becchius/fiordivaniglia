@@ -28,13 +28,16 @@
         display: block;
         width: 100%;
         position: relative;
-        border: 1px solid $c-module-border;
-        background-color: $c-module-background;
+        border-bottom: 1px solid $c-module-border;
 
         li {
             float: left;
-            border-right: 1px solid transparent;
-            border-left: 1px solid transparent;
+            border-top: 1px solid $c-module-border;
+            border-bottom: 0;
+            border-right: 0;
+            border-left: 1px solid $c-module-border;
+
+            background-color: $c-module-background;
 
             > span {
                 @include not-selectable;
@@ -51,11 +54,13 @@
         }
 
         li.current {
-            border-right: 1px solid $c-module-border;
-            border-left: 1px solid $c-module-border;
+           border-bottom: 0;
+            background-color: #FFFFFF;
+
 
             > span {
                 background-color: #FFFFFF;
+
                 z-index: 5;
             }
         }
@@ -65,8 +70,9 @@
             color: $c-action;
         }
 
-        li:first-child {
-            border-left: none;
+        li:last-child {
+            border-right: 1px solid $c-module-border;
+
         }
 
         &:after {

@@ -152,16 +152,16 @@
     }
 
     .subtotal {
-        background-color: #DDDDDD;
+        background-color: $c-module-background;
         text-align: center;
         line-height: 2em;
 
         .label {
-            color: white;
+            color: $c-text;
             text-transform: uppercase;
         }
         .price {
-            color: $c-text-primary;
+            color: $c-text-primary-title;
         }
     }
 
@@ -216,7 +216,7 @@
 
 @include bp(min-width, $bp-medium + 1) {
     .checkout-types.minicart {
-        float: none;
+        float: right;
         text-align: center;
     }
 }

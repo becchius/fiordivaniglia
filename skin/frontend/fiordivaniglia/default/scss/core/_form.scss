@@ -190,8 +190,8 @@ input[type=number],
 input[type=password],
 input[type=tel],
 input[type=text] {
-    width: (230px + 135px);
-    max-width: 100%;
+    width: 100%;
+
 }
 
 /* Only show on iPhones (not iPads or any other device) */
@@ -290,6 +290,33 @@ p.required,
     .control {
         margin-bottom: $box-spacing;
     }
+    .field{
+        display: block;
+
+
+    }
+    .fields,
+    .wide{
+        clear: both;
+
+    }
+
+    .wide input {
+        width: 100%;
+    }
+    @include bp(min-width, $bp-medium+1) {
+        .field{
+            display: inline-block;
+            width: 48%;
+
+        }
+        .field:nth-of-type(2n){
+            float: right;
+        }
+        .field:nth-of-type(2n+1){
+            float: left;
+        }
+    }
 }
 
 /* Turn the label of controls (radio/checkbox) into a button style that wraps the input */
@@ -317,7 +344,6 @@ p.required,
     }
 
     label {
-        @include touch-button;
         display: inline-block;
         width: auto;
         max-width: none;
@@ -327,6 +353,10 @@ p.required,
 
         &:hover {
             background-color: $c-module-background-hover;
+        }
+        @include bp(max-width,$bp-small){
+            @include touch-button;
+            padding-left: 40px;
         }
     }
 
@@ -359,6 +389,7 @@ p.required,
 
 .form-list .control {
     margin-top: 10px;
+    clear: both;
 
     label {
         float: none;

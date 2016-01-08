@@ -2,6 +2,13 @@
 
 <layout version="0.1.0">
     <default>
+        <reference name="root">
+            <reference name="root">
+                <action method="setTemplate">
+                    <template>page/2columns-left.phtml</template>
+                </action>
+            </reference>
+        </reference>
         <reference name="footer">
             <remove name="footer_links"/>
             <remove name="footer_links2"/>
@@ -11,7 +18,9 @@
                     The content of this block is taken from the database by its block_id.
                     You can manage it in admin CMS -> Static Blocks
                 -->
-                <action method="setBlockId"><block_id>footer_links_shop</block_id></action>
+                <action method="setBlockId">
+                    <block_id>footer_links_shop</block_id>
+                </action>
             </block>
         </reference>
     </default>
@@ -31,4 +40,45 @@
             </block>
         </reference>
     </cms_index_index>
+    <catalog_cateogory_layered>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+    </catalog_cateogory_layered>
+    <catalog_cateogory_default>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+    </catalog_cateogory_default>
+    <catalog_product_view>
+        <reference name="product.info.options.wrapper.bottom">
+            <action method="insert">
+                <block>catalog.product.related</block>
+                <sibling>product.clone_prices</sibling>
+                <after>true</after>
+            </action>
+
+        </reference>
+    </catalog_product_view>
+    <checkout_onepage_index>
+        <reference name="header">
+            <remove name="top.menu"/>
+            <remove name="top.links"/>
+            <remove name="top.search"/>
+            <remove name="minicart_head"/>
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_success>
+        <reference name="header">
+            <remove name="top.menu"/>
+            <remove name="top.links"/>
+            <remove name="top.search"/>
+            <remove name="minicart_head"/>
+        </reference>
+    </checkout_onepage_success>
+
 </layout>

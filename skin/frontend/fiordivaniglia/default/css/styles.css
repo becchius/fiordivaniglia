@@ -643,13 +643,12 @@ h6, .h6 {
 .product-name h1,
 .product-name .h1 {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
-  color: #636363;
+  color: #ae79ae;
   border-bottom: 1px solid #EDEDED;
   padding-bottom: 3px;
   margin-bottom: 15px;
-  text-transform: uppercase;
 }
 
 /* -------------------------------------------- *
@@ -887,7 +886,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .button,
 .sidebar .actions .button,
 .button.button-secondary {
-  background: #DDDDDD;
+  background: #CBA9CB;
   color: #636363;
   padding: 7px 15px;
 }
@@ -895,14 +894,14 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .button:hover,
 .sidebar .actions .button:hover,
 .button.button-secondary:hover {
-  background: #d0d0d0;
+  background: #c199c1;
   cursor: pointer;
 }
 .cart .buttons-set .button:active,
 .cart-table .button:active,
 .sidebar .actions .button:active,
 .button.button-secondary:active {
-  background: #c4c4c4;
+  background: #b889b8;
   color: #636363;
 }
 .cart .buttons-set .button:focus,
@@ -910,7 +909,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button:focus,
 .button.button-secondary:focus {
   color: #636363;
-  background: #c4c4c4;
+  background: #b889b8;
   outline: none;
 }
 
@@ -923,7 +922,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .product-cart-actions .button,
 #co-shipping-method-form .buttons-set .button,
 .footer .button {
-  background: #CBA9CB;
+  background: #a9abcb;
   display: inline-block;
   padding: 7px 15px;
   border: 0;
@@ -941,21 +940,21 @@ body:not(.customer-account) .block:first-child .block-title {
 .cart-table .product-cart-actions .button:hover,
 #co-shipping-method-form .buttons-set .button:hover,
 .footer .button:hover {
-  background: #c199c1;
+  background: #999bc1;
   cursor: pointer;
 }
 .button:active,
 .cart-table .product-cart-actions .button:active,
 #co-shipping-method-form .buttons-set .button:active,
 .footer .button:active {
-  background: #b889b8;
+  background: #898cb8;
   color: #FFFFFF;
 }
 .button:focus,
 .cart-table .product-cart-actions .button:focus,
 #co-shipping-method-form .buttons-set .button:focus,
 .footer .button:focus {
-  background-color: #b889b8;
+  background-color: #898cb8;
   outline: none;
   color: #FFFFFF;
 }
@@ -985,9 +984,15 @@ a.button:hover {
   border: 0;
   padding: 0 5px;
   margin: 0;
-  background: transparent;
+  background: #CBA9CB;
   cursor: pointer;
   vertical-align: middle;
+}
+.button2:hover {
+  background: #c199c1;
+}
+.button2:active {
+  background: #b889b8;
 }
 
 .button2:focus {
@@ -998,16 +1003,12 @@ a.button:hover {
 .button2 span span {
   line-height: 30px;
   height: 30px;
-  text-decoration: underline;
+  text-decoration: none;
+  font-size: 13px;
   text-transform: uppercase;
   display: inline-block;
-  color: #CBA9CB;
+  color: #FBFBFB;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
-}
-.button2 span:hover,
-.button2 span span:hover {
-  text-decoration: none;
-  color: #ae79ae;
 }
 
 @media only screen and (max-width: 770px) {
@@ -1144,18 +1145,20 @@ a.button:hover {
 .breadcrumbs {
   overflow: hidden;
   margin: -15px 0 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .breadcrumbs li {
   float: left;
-  font-size: 12px;
+  font-size: 11px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   text-transform: uppercase;
 }
 
 .breadcrumbs a {
   float: left;
-  color: #636363;
+  color: #969696;
 }
 
 .breadcrumbs a:hover {
@@ -1163,7 +1166,7 @@ a.button:hover {
 }
 
 .breadcrumbs strong {
-  color: #636363;
+  color: #969696;
   font-weight: normal;
 }
 
@@ -1298,7 +1301,7 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1260px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -1309,14 +1312,21 @@ a.button:hover {
   clear: both;
 }
 
+.footer-container {
+  padding: 0;
+}
+
 @media only screen and (min-width: 480px) {
-  .main-container,
-  .footer-container {
+  .main-container {
     padding: 30px;
+  }
+
+  .footer-container {
+    padding: 0;
   }
 }
 .footer-container {
-  padding-top: 0px;
+  padding: 0px;
 }
 
 /* -------------------------------------------- *
@@ -1501,7 +1511,7 @@ a.button:hover {
  */
 @media only screen and (min-width: 771px) {
   .top-container {
-    max-width: 1260px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -1517,7 +1527,7 @@ a.button:hover {
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1860px;
   margin-left: auto;
   margin-right: auto;
   line-height: 11px;
@@ -2084,8 +2094,8 @@ span.weee {
   margin-bottom: 15px;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #CCCCCC;
-  background: #FBF8FB;
-  padding: 5px 10px 0px 10px;
+  background: none;
+  padding: 10px 10px 0px 10px;
 }
 .toolbar:after {
   content: '';
@@ -2118,6 +2128,7 @@ span.weee {
 .sorter {
   float: left;
   margin-bottom: 5px;
+  width: 100%;
 }
 .sorter label {
   float: left;
@@ -2176,6 +2187,7 @@ span.weee {
 }
 
 .pager {
+  display: none;
   float: right;
   overflow: hidden;
 }
@@ -2665,8 +2677,7 @@ input[type=number],
 input[type=password],
 input[type=tel],
 input[type=text] {
-  width: 365px;
-  max-width: 100%;
+  width: 100%;
 }
 
 /* Only show on iPhones (not iPads or any other device) */
@@ -2756,6 +2767,28 @@ p.required,
 .form-list .control {
   margin-bottom: 10px;
 }
+.form-list .field {
+  display: block;
+}
+.form-list .fields,
+.form-list .wide {
+  clear: both;
+}
+.form-list .wide input {
+  width: 100%;
+}
+@media only screen and (min-width: 771px) {
+  .form-list .field {
+    display: inline-block;
+    width: 48%;
+  }
+  .form-list .field:nth-of-type(2n) {
+    float: right;
+  }
+  .form-list .field:nth-of-type(2n+1) {
+    float: left;
+  }
+}
 
 /* Turn the label of controls (radio/checkbox) into a button style that wraps the input */
 .form-list .control,
@@ -2800,9 +2833,6 @@ p.required,
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label,
 .product-options ul.options-list label {
-  color: #636363;
-  background-color: #FBF8FB;
-  padding: 5px 10px;
   display: inline-block;
   width: auto;
   max-width: none;
@@ -2816,6 +2846,18 @@ p.required,
 #co-shipping-method-form .sp-methods dd label:hover,
 .product-options ul.options-list label:hover {
   background-color: #f3f1f3;
+}
+@media only screen and (max-width: 599px) {
+  .form-list .control label,
+  .sp-methods dt label,
+  #checkout-shipping-method-load .sp-methods dd label,
+  #co-shipping-method-form .sp-methods dd label,
+  .product-options ul.options-list label {
+    color: #636363;
+    background-color: #e9e9f1;
+    padding: 5px 10px;
+    padding-left: 40px;
+  }
 }
 .form-list .control .no-display + label,
 .sp-methods dt .no-display + label,
@@ -2848,6 +2890,7 @@ p.required,
 
 .form-list .control {
   margin-top: 10px;
+  clear: both;
 }
 .form-list .control label {
   float: none;
@@ -2891,7 +2934,7 @@ form .form-instructions {
 }
 
 .data-table th {
-  background: #F4F4F4;
+  background: #FBF8FB;
   text-transform: uppercase;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   line-height: 1.4;
@@ -2900,7 +2943,7 @@ form .form-instructions {
 
 .data-table thead th,
 .data-table tbody td {
-  border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid #CCCCCC;
 }
 
 .data-table tbody td,
@@ -2909,7 +2952,7 @@ form .form-instructions {
 }
 
 .data-table tfoot tr {
-  background: #F4F4F4;
+  background: #FBF8FB;
 }
 
 .data-table tbody td .item-options {
@@ -2924,7 +2967,7 @@ form .form-instructions {
  * Generic Info Table
  * ============================================ */
 .info-box {
-  border: 1px solid #C0C0C0;
+  border: 1px solid #CCCCCC;
   padding: 12px 15px;
   margin: 0 0 15px;
 }
@@ -2952,11 +2995,11 @@ form .form-instructions {
  * ============================================ */
 .zebra-table tr:first-child,
 .zebra-table th:first-child {
-  border-top: 1px solid #C0C0C0;
+  border-top: 1px solid #CCCCCC;
 }
 .zebra-table td,
 .zebra-table th {
-  border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid #CCCCCC;
   padding: 6px;
   background-color: transparent;
 }
@@ -3167,7 +3210,7 @@ body {
  * ============================================ */
 @media only screen and (min-width: 771px) {
   .page-header {
-    max-width: 1260px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 0 30px;
   }
@@ -3190,7 +3233,7 @@ body {
   text-transform: uppercase;
 }
 .header-language-background .header-language-container {
-  max-width: 1200px;
+  max-width: 1860px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -4027,6 +4070,7 @@ a.skip-link {
 }
 .footer .block-subscribe .privacy-box .checkbox {
   vertical-align: middle;
+  margin-top: 6px;
 }
 .footer .links,
 .footer .block-subscribe {
@@ -4199,6 +4243,7 @@ body.catalogsearch-result-index .page-title h1 {
 .products-list .action .button,
 .products-grid .actions .button {
   white-space: normal;
+  background-color: #a9abcb;
 }
 
 /* -------------------------------------------- *
@@ -4649,8 +4694,8 @@ p.product-name a:hover {
  * Catalog - List
  * ============================================ */
 .category-image {
-  border: 1px solid #CCCCCC;
-  padding: 10px;
+  border: none;
+  padding: 0;
 }
 .category-image img {
   width: 100%;
@@ -4780,9 +4825,26 @@ p.product-name a:hover {
 @media only screen and (min-width: 771px) {
   .block-layered-nav .block-content > dl > dt {
     padding-left: 10px;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    background: none;
+    color: #CBA9CB;
+    font-weight: bold;
   }
   .block-layered-nav .block-content > dl > dt:after {
     display: none;
+  }
+
+  .block-layered-nav .block-content > dl > dd {
+    border: none;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+
+  .block-layered-nav .block-content > dl > dd a {
+    color: #A0A0A0;
   }
 }
 @media only screen and (max-width: 770px) {
@@ -4865,7 +4927,7 @@ p.product-name a:hover {
     margin-top: -5px;
   }
   .block-layered-nav .block-subtitle--filter:hover {
-    background-color: #c199c1;
+    background-color: #999bc1;
     color: #FFFFFF;
   }
   .block-layered-nav .block-subtitle--filter.active:after {
@@ -4885,9 +4947,8 @@ p.product-name a:hover {
 
   #narrow-by-list,
   #narrow-by-list2 {
-    padding: 10px;
-    border: 1px solid #CCCCCC;
-    border-top: 0;
+    padding: 0;
+    border: none;
   }
 
   .block-layered-nav dl ol > li > a,
@@ -4898,13 +4959,16 @@ p.product-name a:hover {
 
   .block-layered-nav dl ol > li > a {
     color: #636363;
-    background-color: #FBF8FB;
+    background-color: #e9e9f1;
     padding: 5px 10px;
   }
   .block-layered-nav dl ol > li > a:hover {
     text-decoration: none;
     background: #f3f1f3;
   }
+}
+.block-layered-nav .currently {
+  background-color: #FBF8FB;
 }
 .block-layered-nav .currently .block-subtitle {
   display: block;
@@ -4937,7 +5001,12 @@ p.product-name a:hover {
 
 .block-layered-nav .actions {
   text-align: right;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
+}
+
+.block-layered-nav .actions a {
+  color: #b889b8;
+  float: right;
 }
 
 /* ============================================ *
@@ -4962,8 +5031,8 @@ p.product-name a:hover {
   clear: both;
 }
 .product-view .product-shop .product-name .h1,
-.product-view .product-img-box .product-name h1 {
-  color: #CBA9CB;
+.product-view .product-img-box .produproct-name h1 {
+  color: #ae79ae;
   margin-bottom: 10px;
   border: 0;
 }
@@ -4973,6 +5042,10 @@ p.product-name a:hover {
 }
 .product-view .product-shop .product-name {
   display: none;
+  float: left;
+}
+.product-view .product-shop .block-related .product-name {
+  display: block;
   float: left;
 }
 .product-view .product-shop .product-name .h1 {
@@ -5053,9 +5126,14 @@ p.product-name a:hover {
 }
 .product-view .add-to-cart-wrapper,
 .product-view .block-related {
-  width: 50%;
-  float: right;
-  clear: right;
+  width: 100%;
+  float: left;
+  padding-left: 0;
+}
+.product-view .product-options-bottom .add-to-cart-wrapper,
+.product-view .product-options-bottom .block-related {
+  width: 100%;
+  float: left;
 }
 
 @media only screen and (max-width: 850px) {
@@ -5107,6 +5185,9 @@ p.product-name a:hover {
   max-width: 100%;
   max-height: 750px;
   margin: 0px auto;
+}
+.product-img-box .more-views {
+  text-align: center;
 }
 
 @media only screen and (max-width: 479px) {
@@ -5168,9 +5249,7 @@ p.product-name a:hover {
   border-color: #c7c7c7;
 }
 
-.product-view .product-shop,
-.product-view .add-to-cart-wrapper,
-.product-view .block-related {
+.product-view .product-shop {
   padding-left: 15px;
 }
 
@@ -5181,7 +5260,6 @@ p.product-name a:hover {
 .product-view .product-shop,
 .product-img-box,
 .product-collateral,
-.product-view .block-related,
 .box-collateral {
   margin-bottom: 10px;
 }
@@ -5199,6 +5277,7 @@ p.product-name a:hover {
   padding-bottom: 3px;
   margin-bottom: 10px;
   border-bottom: 1px solid #CCCCCC;
+  margin-top: 30px;
 }
 .product-view .add-to-cart .qty-wrapper,
 .product-view .product-options-bottom .price-box,
@@ -5376,13 +5455,15 @@ p.product-name a:hover {
     display: block;
     width: 100%;
     position: relative;
-    border: 1px solid #CCCCCC;
-    background-color: #FBF8FB;
+    border-bottom: 1px solid #CCCCCC;
   }
   .product-collateral .toggle-tabs li {
     float: left;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid #CCCCCC;
+    background-color: #FBF8FB;
   }
   .product-collateral .toggle-tabs li > span {
     -moz-user-select: none;
@@ -5401,8 +5482,8 @@ p.product-name a:hover {
     bottom: -1px;
   }
   .product-collateral .toggle-tabs li.current {
-    border-right: 1px solid #CCCCCC;
-    border-left: 1px solid #CCCCCC;
+    border-bottom: 0;
+    background-color: #FFFFFF;
   }
   .product-collateral .toggle-tabs li.current > span {
     background-color: #FFFFFF;
@@ -5412,8 +5493,8 @@ p.product-name a:hover {
   .product-collateral .toggle-tabs li:hover span {
     color: #CBA9CB;
   }
-  .product-collateral .toggle-tabs li:first-child {
-    border-left: none;
+  .product-collateral .toggle-tabs li:last-child {
+    border-right: 1px solid #CCCCCC;
   }
   .product-collateral .toggle-tabs:after {
     content: '';
@@ -5577,18 +5658,19 @@ p.product-name a:hover {
 
 #product-attribute-specs-table {
   max-width: 50em;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #CCCCCC;
 }
 #product-attribute-specs-table th {
-  border-right: 1px solid #C0C0C0;
-  border-bottom: 1px solid #C0C0C0;
+  border-right: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  background-color: #e9e9f1;
 }
 
 /* -------------------------------------------- *
  * Catalog - Grouped Product List
  */
 .grouped-items-table-wrapper {
-  border: solid 1px #C0C0C0;
+  border: solid 1px #CCCCCC;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -5798,7 +5880,7 @@ p.product-name a:hover {
 
 /* "display: none" should be removed if products on site have a long list of product options and those product options */
 /*  affect the price so that the customer can see the updated price close to the "Add to Cart" button */
-.product-options-bottom .price-box {
+.product-options-bottom .clone .price-box {
   display: none;
   float: right;
   margin: 0 0 10px;
@@ -5806,14 +5888,14 @@ p.product-name a:hover {
 }
 
 @media only screen and (max-width: 479px) {
-  .product-options-bottom .price-box .price-as-configured {
+  .product-options-bottom .clone .price-box .price-as-configured {
     text-align: right;
   }
-  .product-options-bottom .price-box .price-as-configured .price-label {
+  .product-options-bottom .clone .price-box .price-as-configured .price-label {
     display: block;
   }
 }
-.product-options-bottom .price-tax {
+.product-options-bottom .clone .price-tax {
   float: left;
 }
 
@@ -5821,13 +5903,14 @@ p.product-name a:hover {
  * Related Products
  */
 /* Block: Related */
-.block-related li {
+.product-shop .block-related li, .product-options-bottom .block-related li {
   margin-bottom: 7px;
 }
-.block-related .block-title {
-  border-bottom: none;
+.product-shop .block-related .block-title, .product-options-bottom .block-related .block-title {
+  border: none;
+  margin-bottom: 15px;
 }
-.block-related .block-title h2 {
+.product-shop .block-related .block-title h2, .product-options-bottom .block-related .block-title h2 {
   margin: 0;
   margin-bottom: 0.5em;
   color: #636363;
@@ -5840,47 +5923,71 @@ p.product-name a:hover {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.block-related .block-subtitle {
+.product-shop .block-related .block-subtitle, .product-options-bottom .block-related .block-subtitle {
   margin-bottom: 7px;
+  display: none;
 }
-.block-related .product {
+.product-shop .block-related .product, .product-options-bottom .block-related .product {
   margin-left: 20px;
   position: relative;
 }
-.block-related .checkbox {
+.product-shop .block-related .checkbox, .product-options-bottom .block-related .checkbox {
   float: left;
   margin-top: 36px;
 }
-.block-related .product-details {
+.product-shop .block-related .product-details, .product-options-bottom .block-related .product-details {
   margin-left: 90px;
 }
-.block-related .product-name {
+.product-shop .block-related .product-name, .product-options-bottom .block-related .product-name {
   margin-bottom: 3px;
+  width: 100%;
 }
-.block-related .product-details .price-box {
+.product-shop .block-related .product-details .price-box, .product-options-bottom .block-related .product-details .price-box {
   margin: 2px 0 3px;
 }
-.block-related .product-details .price-box a,
-.block-related .product-details .price-box p,
-.block-related .product-details .price-box span {
+.product-shop .block-related .product-details .price-box a,
+.product-shop .block-related .product-details .price-box p,
+.product-shop .block-related .product-details .price-box span, .product-options-bottom .block-related .product-details .price-box a,
+.product-options-bottom .block-related .product-details .price-box p,
+.product-options-bottom .block-related .product-details .price-box span {
   float: left;
   margin-left: 3px;
 }
-.block-related .product-details .price-box a:first-child,
-.block-related .product-details .price-box p:first-child,
-.block-related .product-details .price-box span:first-child {
+.product-shop .block-related .product-details .price-box a:first-child,
+.product-shop .block-related .product-details .price-box p:first-child,
+.product-shop .block-related .product-details .price-box span:first-child, .product-options-bottom .block-related .product-details .price-box a:first-child,
+.product-options-bottom .block-related .product-details .price-box p:first-child,
+.product-options-bottom .block-related .product-details .price-box span:first-child {
   margin-left: 0;
   font-size: 16px;
   padding-right: 5px;
   padding-left: 5px;
 }
-.block-related .product-details .price-box:after {
+.product-shop .block-related .product-details .price-box:after, .product-options-bottom .block-related .product-details .price-box:after {
   content: '';
   display: table;
   clear: both;
 }
-.block-related .link-wishlist {
+.product-shop .block-related .link-wishlist, .product-options-bottom .block-related .link-wishlist {
   display: none;
+}
+
+.add-to-box div.block-related:first-child .block-title {
+  padding-top: 10px;
+  border-top: 1px solid #CCCCCC;
+}
+.add-to-box div.block-related:first-child .block-title h2 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  color: #636363;
+  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 /* -------------------------------------------- *
@@ -6111,16 +6218,24 @@ p.product-name a:hover {
  * ============================================ */
 .cart-table {
   float: left;
-  width: 60%;
+  width: 100%;
 }
 
 .cart .button {
   white-space: normal;
 }
 
-.cart-forms,
-.cart-totals-wrapper,
 .crosssell {
+  float: left;
+  width: 100%;
+}
+
+.cart-forms {
+  float: left;
+  width: 40%;
+}
+
+.cart-totals-wrapper {
   float: right;
   clear: right;
   width: 40%;
@@ -6161,14 +6276,16 @@ p.product-name a:hover {
 .display-both-prices .crosssell {
   padding-left: 10px;
 }
-.display-both-prices .cart-forms,
-.display-both-prices .cart-totals-wrapper,
 .display-both-prices .crosssell {
+  width: 100%;
+}
+.display-both-prices .cart-forms,
+.display-both-prices .cart-totals-wrapper {
   width: 50%;
 }
 .display-both-prices .crosssell {
-  clear: right;
-  float: right;
+  clear: left;
+  float: left;
 }
 
 @media only screen and (max-width: 979px) {
@@ -6185,14 +6302,16 @@ p.product-name a:hover {
   .display-single-price .crosssell {
     padding-left: 10px;
   }
-  .display-single-price .cart-forms,
-  .display-single-price .cart-totals-wrapper,
   .display-single-price .crosssell {
+    width: 100%;
+  }
+  .display-single-price .cart-forms,
+  .display-single-price .cart-totals-wrapper {
     width: 50%;
   }
   .display-single-price .crosssell {
-    clear: right;
-    float: right;
+    clear: left;
+    float: left;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -6291,6 +6410,22 @@ p.product-name a:hover {
     padding-right: 70px;
   }
 }
+.btn-checkout {
+  font-size: 15px;
+}
+
+.btn-empty span span {
+  color: #636363;
+}
+
+.btn-empty {
+  background-color: #ECECEC;
+  color: #636363;
+}
+.btn-empty:hover {
+  background-color: #c6c6c6;
+}
+
 .cart-totals .checkout-types .btn-checkout {
   margin-bottom: 7px;
 }
@@ -6342,7 +6477,7 @@ p.product-name a:hover {
   padding-left: 15px;
 }
 .cart-table tr {
-  border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid #CCCCCC;
 }
 .cart-table tfoot tr {
   background: none;
@@ -6745,7 +6880,7 @@ p.product-name a:hover {
   border-bottom: 1px solid #E6E6E6;
 }
 .cart .cart-totals table tfoot td {
-  font-size: 24px;
+  font-size: 20px;
   padding: 2px 5px;
   vertical-align: top;
 }
@@ -6835,11 +6970,11 @@ p.product-name a:hover {
  * Checkout - Cart Cross sell
  * ============================================ */
 .crosssell h2 {
-  color: #3399CC;
+  color: #CBA9CB;
 }
 .crosssell .item a.product-image {
   width: auto;
-  float: left;
+  float: none;
 }
 
 /* Change the layout to 2 columns at a breakpoint that is higher than a 3 columns layout would normally break */
@@ -6848,7 +6983,7 @@ p.product-name a:hover {
     /* Undo three-column config */
   }
   .crosssell .products-grid > li:nth-child(even),
-  .crosssell .products-grid > li:nth-child(3n),
+  .crosssell .products-grid > li:nth-child(4n),
   .crosssell .products-grid > li {
     width: 47.72727%;
     margin-right: 4.54545%;
@@ -6859,7 +6994,7 @@ p.product-name a:hover {
   .crosssell .products-grid > li:nth-child(even) {
     margin-right: 0;
   }
-  .crosssell .products-grid > li:nth-child(3n+1) {
+  .crosssell .products-grid > li:nth-child(4n+1) {
     clear: none;
   }
 }
@@ -6890,6 +7025,10 @@ p.product-name a:hover {
 .checkout-onepage-index .col-main {
   width: auto;
   float: none;
+}
+
+.checkout-onepage-index .page-title h1 {
+  border: none;
 }
 
 @media only screen and (min-width: 980px) {
@@ -7012,8 +7151,9 @@ p.product-name a:hover {
 }
 
 .opc select {
-  max-width: 365px;
+  max-width: 100%;
   width: 100%;
+  height: 30px;
 }
 
 .opc h3 {
@@ -7022,6 +7162,7 @@ p.product-name a:hover {
 
 .opc .buttons-set {
   text-align: left;
+  border-top: none;
 }
 .opc .buttons-set button.button {
   float: left;
@@ -7094,14 +7235,6 @@ p.product-name a:hover {
   -o-transition: margin-left 80ms 0;
   -webkit-transition: margin-left 80ms 0;
   transition: margin-left 80ms 0;
-}
-
-/* When a user progresses from the "Checkout Method" to "Billing Information" for the first time, the              */
-/* "opc-has-progressed-from-login" class gets added to the body. Also, the .opc element will only have the         */
-/* "opc-firststep-login" class if the first step of the checkout is the "Checkout Method" (eg, not when logged in) */
-body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section:not(#opc-login) .step-title,
-body:not(.opc-has-progressed-from-login) .opc-block-progress-step-login {
-  opacity: 0;
 }
 
 body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-login .step-title .number {
@@ -7273,13 +7406,14 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 }
 #review-buttons-container .btn-checkout {
   min-width: 220px;
+  float: right;
 }
 #review-buttons-container .please-wait {
-  float: left;
+  float: right;
   margin-right: 10px;
 }
 #review-buttons-container .f-left {
-  float: right;
+  float: left;
 }
 
 @media only screen and (max-width: 599px) {
@@ -7350,7 +7484,17 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   min-height: 400px;
 }
 
+.gift-messages {
+  margin-top: 30px;
+}
+.gift-messages .control {
+  margin-bottom: 10px;
+}
+
 /* Gift options */
+.gift-messages-form .inner-box p {
+  margin-bottom: 10px;
+}
 .gift-messages-form .item {
   content: '';
   display: table;
@@ -8514,7 +8658,7 @@ div.paypal-logo span > img {
   float: none;
 }
 #customer-reviews .review-heading {
-  border-top: 1px solid #CCCCCC;
+  border-top: 0;
   border-bottom: 1px solid #CCCCCC;
   padding: 10px 0 5px;
 }
@@ -8544,7 +8688,7 @@ div.paypal-logo span > img {
   display: none;
 }
 #customer-reviews h2 {
-  color: #3399CC;
+  color: #ae79ae;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -8558,7 +8702,7 @@ div.paypal-logo span > img {
   text-transform: uppercase;
 }
 #customer-reviews h3 span {
-  color: #3399CC;
+  color: #a9abcb;
 }
 #customer-reviews .fieldset {
   padding-top: 25px;
@@ -8641,7 +8785,7 @@ div.paypal-logo span > img {
   margin: 15px 0;
 }
 #customer-reviews dl dd .review-meta {
-  color: #3399CC;
+  color: #a9abcb;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
   font-weight: normal;
@@ -8878,10 +9022,10 @@ div.paypal-logo span > img {
   position: relative;
 }
 .slideshow-pager span:hover:before {
-  background-color: #c199c1;
+  background-color: #999bc1;
 }
 .slideshow-pager span.cycle-pager-active:before {
-  background-color: #b889b8;
+  background-color: #898cb8;
 }
 .slideshow-pager > * {
   cursor: pointer;
@@ -8936,7 +9080,7 @@ div.paypal-logo span > img {
   left: 10px;
 }
 .slideshow-prev:hover:before {
-  border-color: transparent #c199c1 transparent transparent;
+  border-color: transparent #999bc1 transparent transparent;
 }
 
 .slideshow-next {
@@ -8949,7 +9093,7 @@ div.paypal-logo span > img {
   right: 10px;
 }
 .slideshow-next:hover:before {
-  border-color: transparent transparent transparent #c199c1;
+  border-color: transparent transparent transparent #999bc1;
 }
 
 .cycle-caption {
@@ -8985,7 +9129,7 @@ div.paypal-logo span > img {
   width: 100%;
 }
 #wishlist-table.clean-table th {
-  border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid #CCCCCC;
 }
 #wishlist-table.clean-table td {
   padding: 15px;
@@ -9402,16 +9546,16 @@ div.paypal-logo span > img {
   opacity: 1;
 }
 .header-minicart .subtotal {
-  background-color: #DDDDDD;
+  background-color: #FBF8FB;
   text-align: center;
   line-height: 2em;
 }
 .header-minicart .subtotal .label {
-  color: white;
+  color: #636363;
   text-transform: uppercase;
 }
 .header-minicart .subtotal .price {
-  color: #CBA9CB;
+  color: #ae79ae;
 }
 .header-minicart .minicart-actions {
   padding: 10px;
@@ -9454,7 +9598,7 @@ div.paypal-logo span > img {
 
 @media only screen and (min-width: 771px) {
   .checkout-types.minicart {
-    float: none;
+    float: right;
     text-align: center;
   }
 }
@@ -10401,7 +10545,7 @@ body[class*="checkout-multishipping-"] .checkout-progress > li {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 body[class*="checkout-multishipping-"] .checkout-progress > li.active {
-  background-color: #DDDDDD;
+  background-color: #CBA9CB;
 }
 body[class*="checkout-multishipping-"] .checkout-progress > li.last {
   border-right: 0px;

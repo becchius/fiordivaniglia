@@ -44,6 +44,7 @@ body.catalogsearch-result-index .page-title h1 {
 .products-list .action .button,
 .products-grid .actions .button {
     white-space: normal;
+    background-color: $c-button;
 }
 
 /* -------------------------------------------- *
@@ -454,8 +455,8 @@ $productsGridActionHeight: 85px;
  * ============================================ */
 
 .category-image {
-    border: 1px solid $c-module-border;
-    padding: 10px;
+    border: none;
+    padding: 0;
 
     img {
         width: 100%;
@@ -499,10 +500,25 @@ $productsGridActionHeight: 85px;
 @include bp(min-width, $bp-medium+1) {
     .block-layered-nav .block-content > dl > dt {
         padding-left: 10px;
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+        background: none;
+        color: $c-action;
+        font-weight: bold;
 
         &:after {
             display: none;
         }
+    }
+    .block-layered-nav .block-content > dl > dd {
+        border: none;
+        margin-bottom: $trim-small;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+    .block-layered-nav .block-content > dl > dd  a{
+        color: $c-text-gray;
     }
 }
 
@@ -522,6 +538,8 @@ $productsGridActionHeight: 85px;
         margin-top: 15px;
         @include accordionCollapse;
     }
+
+
 
     .block-layered-nav .block-subtitle--filter {
         background-color: $c-action;
@@ -552,9 +570,9 @@ $productsGridActionHeight: 85px;
 
     #narrow-by-list,
     #narrow-by-list2 {
-        padding: $box-spacing;
-        border: 1px solid $c-module-border;
-        border-top: 0;
+        padding: 0;
+        border:none;
+
     }
 
     .block-layered-nav dl ol > li > a,
@@ -574,6 +592,7 @@ $productsGridActionHeight: 85px;
 }
 
 .block-layered-nav .currently {
+    background-color: $c-module-background;
     .block-subtitle {
         display: block;
         @include h4;
@@ -582,6 +601,7 @@ $productsGridActionHeight: 85px;
     ol {
         padding-left: $box-spacing;
         margin-bottom: $box-spacing;
+
     }
     ol li {
         margin-bottom: 5px;
@@ -598,5 +618,9 @@ $productsGridActionHeight: 85px;
 
 .block-layered-nav .actions {
     text-align: right;
-    margin-bottom: $element-spacing;
+    margin-bottom: $trim-small;
+}
+.block-layered-nav .actions a{
+    color: $c-button-secondary-active;
+    float: right;
 }

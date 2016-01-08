@@ -54,8 +54,8 @@
     }
 
     .product-shop .product-name .h1,
-    .product-img-box .product-name h1 {
-        color: $c-action;
+    .product-img-box .produproct-name h1 {
+        color:  $c-text-primary-title;
         margin-bottom: 10px;
         border: 0;
     }
@@ -66,6 +66,10 @@
 
         .product-name {
             display: none;
+            float: left;
+        }
+        .block-related .product-name {
+            display: block;
             float: left;
         }
         .product-name .h1 {
@@ -169,9 +173,18 @@
 
     .add-to-cart-wrapper,
     .block-related {
-        width: 50%;
-        float: right;
-        clear: right;
+        width: 100%;
+        float: left;
+        padding-left: 0;
+
+    }
+
+    .product-options-bottom .add-to-cart-wrapper,
+    .product-options-bottom .block-related {
+        width: 100%;
+        float: left;
+
+
     }
 
 }
@@ -261,6 +274,9 @@
         // Centering the image for instances where max-height kicks in
         margin: 0px auto;
     }
+    .more-views{
+        text-align: center;
+    }
 }
 
 // On smaller devices, we want to further limit the height of the image, to prevent cropping
@@ -308,8 +324,7 @@
 }
 
 .product-view .product-shop,
-.product-view .add-to-cart-wrapper,
-.product-view .block-related {
+{
     padding-left: $trim/2;
 }
 
@@ -317,10 +332,11 @@
     padding-right: $trim/2;
 }
 
+
+
 .product-view .product-shop,
 .product-img-box,
 .product-collateral,
-.product-view .block-related,
 .box-collateral {
     margin-bottom: $box-spacing;
 }
@@ -336,6 +352,7 @@
         padding-bottom: 3px;
         margin-bottom: 10px;
         border-bottom: 1px solid $c-module-border;
+        margin-top: $trim;
     }
 
     /* Set a min-height so that the floated elements break appropriately */
@@ -604,6 +621,7 @@
     th {
         border-right: 1px solid $c-table-border;
         border-bottom: 1px solid $c-table-border;
+        background-color: $c-module-background-secondary;
     }
 }
 
@@ -822,7 +840,7 @@
 
 /* "display: none" should be removed if products on site have a long list of product options and those product options */
 /*  affect the price so that the customer can see the updated price close to the "Add to Cart" button */
-.product-options-bottom .price-box {
+.product-options-bottom .clone .price-box {
     display: none;
     float: right;
     margin: 0 0 $gap;
@@ -830,7 +848,7 @@
 }
 
 @include bp(max-width, $bp-xsmall) {
-    .product-options-bottom .price-box .price-as-configured {
+    .product-options-bottom .clone .price-box .price-as-configured {
         text-align: right;
 
         .price-label {
@@ -839,7 +857,7 @@
     }
 }
 
-.product-options-bottom .price-tax {
+.product-options-bottom .clone .price-tax {
     float: left;
 }
 
@@ -848,15 +866,15 @@
  */
 
 /* Block: Related */
-
-.block-related {
+.product-shop .block-related, .product-options-bottom .block-related {
 
     li {
         margin-bottom: $element-spacing;
     }
 
     .block-title {
-        border-bottom: none;
+        border: none;
+        margin-bottom: $element-spacing-large;
 
         h2 {
             @include h2();
@@ -866,6 +884,7 @@
 
     .block-subtitle {
         margin-bottom: $element-spacing;
+        display: none;
     }
 
     .product {
@@ -883,10 +902,12 @@
 
     .product-name {
         margin-bottom: 3px;
+        width: 100%;
     }
 
     .product-details .price-box {
         margin: 2px 0 3px;
+
 
         a,
         p,
@@ -909,6 +930,20 @@
         display: none;
     }
 }
+
+.add-to-box div.block-related:first-child{
+
+    .block-title {
+        padding-top: 10px;
+        border-top: 1px solid #CCCCCC;
+
+        h2 {
+            @include h2();
+            margin-bottom: 0;
+        }
+    }
+}
+
 
 /* -------------------------------------------- *
  * Upsell Products

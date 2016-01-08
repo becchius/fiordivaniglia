@@ -398,7 +398,7 @@ a.button:hover {
 // extending doesn't work within media queries: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_in_directives
 @mixin touch-button {
     color: $c-text;
-    background-color: $c-module-background;
+    background-color: $c-module-background-secondary;
     padding: 5px 10px;
 }
 
@@ -406,9 +406,15 @@ a.button:hover {
     border: 0;
     padding: 0 5px;
     margin: 0;
-    background: transparent;
+    background: $c-button-secondary;
     cursor: pointer;
     vertical-align: middle;
+    &:hover {
+        background: $c-button-secondary-hover;
+    }
+    &:active {
+        background: $c-button-secondary-active;
+    }
 }
 
 .button2:focus {
@@ -419,16 +425,14 @@ a.button:hover {
 .button2 span span {
     line-height: 30px;
     height: 30px;
-    text-decoration: underline;
+    text-decoration: none;
+    font-size: 13px;
     text-transform: uppercase;
     display: inline-block;
-    color: $c-action;
+    color: $c-text-white;
     font-family: $f-stack-special;
 
-    &:hover {
-        text-decoration: none;
-        color: $c-stimulus;
-    }
+
 }
 
 @include bp(max-width, $bp-medium) {
@@ -575,18 +579,21 @@ a.button:hover {
 .breadcrumbs {
     overflow: hidden;
     margin: -15px 0 15px;
+    padding-top:  $box-spacing;
+    padding-bottom: $box-spacing;
+
 }
 
 .breadcrumbs li {
     float: left;
-    font-size: $f-size-xs;
+    font-size: $f-size-xxs;
     font-family: $f-stack-special;
     text-transform: uppercase;
 }
 
 .breadcrumbs a {
     float: left;
-    color: $c-text;
+    color: lighten($c-text,20%);
 }
 
 .breadcrumbs a:hover {
@@ -594,7 +601,7 @@ a.button:hover {
 }
 
 .breadcrumbs strong {
-    color: $c-text;
+    color: lighten($c-text,20%);
     font-weight: normal;
 }
 
@@ -735,17 +742,23 @@ a.button:hover {
         @include clearfix;
     }
 }
+.footer-container{
+    padding: 0;
+}
 
 @include bp(min-width, 480px) {
 
-    .main-container,
-    .footer-container {
+    .main-container
+     {
         padding: $trim;
+    }
+    .footer-container{
+        padding: 0;
     }
 }
 
 .footer-container {
-    padding-top: 0px;
+    padding: 0px;
 }
 
 /* -------------------------------------------- *
@@ -1527,8 +1540,8 @@ span.weee {
     margin-bottom: 15px;
     border-bottom: 1px solid $c-module-border;
     border-top: 1px solid $c-module-border;
-    background: $c-module-background;
-    padding: 5px 10px 0px 10px;
+    background: none;
+    padding: 10px 10px 0px 10px;
 
     &:after {
         @include clearfix;
@@ -1563,6 +1576,7 @@ $toolbar-icon-padding-offset: 8px;
 .sorter {
     float: left;
     margin-bottom: 5px;
+    width:100%;
 
     label {
         float: left;
@@ -1628,6 +1642,7 @@ $toolbar-icon-padding-offset: 8px;
 }
 
 .pager {
+    display: none;
     float: right;
     overflow: hidden;
 

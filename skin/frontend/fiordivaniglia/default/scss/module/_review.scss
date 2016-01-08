@@ -32,7 +32,7 @@
     float: none;
 
     .review-heading {
-        border-top: 1px solid $c-module-border;
+        border-top:0;
         border-bottom: 1px solid $c-module-border;
         padding: $gap 0 5px;
 
@@ -69,7 +69,7 @@
     }
 
     h2 {
-        color: $c-blue;
+        color: $c-text-primary-title;
         font-size: $f-size-xs;
         text-transform: uppercase;
 
@@ -85,7 +85,7 @@
         text-transform: uppercase;
 
         span {
-            color: $c-blue;
+            color: $c-button;
         }
     }
 
@@ -191,7 +191,7 @@
             }
 
             .review-meta {
-                color: $c-blue;
+                color: $c-button;
                 font-family: $f-stack-special;
                 font-size: 10px;
                 font-weight: normal;
