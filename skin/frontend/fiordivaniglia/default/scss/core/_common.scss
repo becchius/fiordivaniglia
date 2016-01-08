@@ -312,7 +312,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button,
 .button.button-secondary {
     background: $c-button-secondary;
-    color: $c-text;
+    color: $c-text-white;
     padding: 7px 15px;
 
     &:hover {
@@ -322,11 +322,11 @@ body:not(.customer-account) .block:first-child .block-title {
 
     &:active {
         background: $c-button-secondary-active;
-        color: $c-text;
+        color: $c-text-white;
     }
 
     &:focus {
-        color: $c-text;
+        color: $c-text-white;
         background: $c-button-secondary-active;
         outline: none;
     }
@@ -744,6 +744,7 @@ a.button:hover {
 }
 .footer-container{
     padding: 0;
+    max-width: none;
 }
 
 @include bp(min-width, 480px) {
@@ -1352,7 +1353,7 @@ span.weee {
     width: 200px;
     padding: 8px;
     border: 1px solid $c-action;
-    background-color: #F6F6F6;
+    background-color: $c-module-background;
     top: 21px;
     left: -100px;
 

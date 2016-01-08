@@ -162,7 +162,8 @@
 
 .customer-account-create {
     .buttons-set {
-        max-width: 455px;
+        border-top: none;
+        max-width: 100%;
     }
 
     .fieldset,
@@ -186,7 +187,7 @@
 .customer-account-forgotpassword {
     .fieldset,
     .buttons-set {
-        margin-left: $trim;
+        margin: auto;
         max-width: 400px;
 
         @include bp(max-width, $bp-xsmall) {
@@ -386,7 +387,7 @@ body.customer-account {
 
     .box-account {
         padding-bottom: 40px;
-        border-bottom: 1px solid $c-module-border;
+        border-bottom: none;
         margin-bottom: 45px;
 
         p,

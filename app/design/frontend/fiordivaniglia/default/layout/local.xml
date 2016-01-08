@@ -81,4 +81,40 @@
         </reference>
     </checkout_onepage_success>
 
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="removeLink">
+                <name><![CDATA[OAuth Customer Tokens]]></name>
+            </action>
+            <action method="removeLink">
+                <name>billing_agreements</name>
+            </action>
+            <action method="removeLink">
+                <name>recurring_profiles</name>
+            </action>
+        </reference>
+        <reference name="left">
+            <remove name="sale.reorder.sidebar"/>
+        </reference>
+    </customer_account>
+
+    <wishlist_index_index translate="label">
+        <reference name="customer.wishlist.item.info">
+            <action method="unsetChild"><name>customer.wishlist.button.update</name></action>
+            <action method="append">
+                <block>customer.wishlist.item.options</block>
+            </action>
+
+        </reference>
+        <reference name="customer.wishlist.item.cart">
+            <action method="unsetChild"><name>customer.wishlist.item.options</name></action>
+        </reference>
+    </wishlist_index_index>
+    <catalogsearch_result_index translate="label">
+    <reference name="root">
+        <action method="setData"><name>layout_code</name><code>two_columns_left</code></action>
+        <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+    </reference>
+    </catalogsearch_result_index>
+
 </layout>

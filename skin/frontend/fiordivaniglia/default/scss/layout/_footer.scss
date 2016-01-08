@@ -40,6 +40,10 @@
     clear: both;
     width: 100%;
 
+    .footer-inner{
+        max-width: $max-container-width;
+        margin: auto;
+    }
     .block-title {
         border-bottom: 0;
         border-top:0;

@@ -777,7 +777,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button,
 .button.button-secondary {
   background: #CBA9CB;
-  color: #636363;
+  color: #FBFBFB;
   padding: 7px 15px;
 }
 .cart .buttons-set .button:hover,
@@ -792,13 +792,13 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button:active,
 .button.button-secondary:active {
   background: #b889b8;
-  color: #636363;
+  color: #FBFBFB;
 }
 .cart .buttons-set .button:focus,
 .cart-table .button:focus,
 .sidebar .actions .button:focus,
 .button.button-secondary:focus {
-  color: #636363;
+  color: #FBFBFB;
   background: #b889b8;
   outline: none;
 }
@@ -1140,7 +1140,7 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1920px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -1153,6 +1153,7 @@ a.button:hover {
 
 .footer-container {
   padding: 0;
+  max-width: none;
 }
 
 .main-container {
@@ -1275,7 +1276,7 @@ a.button:hover {
  * Top Container
  */
 .top-container {
-  max-width: 1920px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -1291,7 +1292,7 @@ a.button:hover {
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
-  max-width: 1860px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   line-height: 11px;
@@ -1687,7 +1688,7 @@ span.weee {
   width: 200px;
   padding: 8px;
   border: 1px solid #CBA9CB;
-  background-color: #F6F6F6;
+  background-color: #FBF8FB;
   top: 21px;
   left: -100px;
 }
@@ -2434,8 +2435,9 @@ p.required,
 }
 .form-list select {
   margin-top: 4px;
-  width: 365px;
+  width: 100%;
   max-width: 100%;
+  height: 30px;
 }
 .form-list .input-range .input-text {
   width: 74px;
@@ -2706,7 +2708,7 @@ body {
  * Header
  * ============================================ */
 .page-header {
-  max-width: 1920px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -2729,7 +2731,7 @@ body {
   text-transform: uppercase;
 }
 .header-language-background .header-language-container {
-  max-width: 1860px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3381,6 +3383,10 @@ a.skip-link {
   /* -------------------------------------------- *
    * Social icons
    */
+}
+.footer .footer-inner {
+  max-width: 1340px;
+  margin: auto;
 }
 .footer .block-title {
   border-bottom: 0;
@@ -5696,12 +5702,12 @@ p.product-name a:hover {
 
 .checkout-onepage-index .col-main {
   float: left;
-  width: 68.75%;
+  width: 76%;
   padding-right: 20px;
 }
 .checkout-onepage-index .col-right,
 .checkout-onepage-index .col-left {
-  width: 31.25%;
+  width: 24%;
   display: block;
 }
 .checkout-onepage-index .col-right {
@@ -6494,7 +6500,8 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 }
 
 .customer-account-create .buttons-set {
-  max-width: 455px;
+  border-top: none;
+  max-width: 100%;
 }
 .customer-account-create .fieldset,
 .customer-account-create .buttons-set {
@@ -6509,7 +6516,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
 .customer-account-forgotpassword .fieldset,
 .customer-account-forgotpassword .buttons-set {
-  margin-left: 30px;
+  margin: auto;
   max-width: 400px;
 }
 .customer-account-forgotpassword .fieldset .input-box input.input-text {
@@ -6642,7 +6649,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .dashboard .box-account {
   padding-bottom: 40px;
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: none;
   margin-bottom: 45px;
 }
 .dashboard .box-account p,
@@ -7442,9 +7449,9 @@ div.paypal-logo span > img {
   border: 1px solid #CBA9CB;
 }
 #wishlist-table .item-manage {
-  text-align: right;
   max-width: 450px;
   padding-top: 5px;
+  margin-bottom: 10px;
 }
 #wishlist-table .item-manage .button {
   font-size: 11px;
