@@ -48,6 +48,7 @@
         @include loadingOverlay();
         clear: both;
         position: relative;
+        padding-top: 10px;
     }
 
     .block-cart {
@@ -235,6 +236,7 @@
             }
         }
         .minicart-wrapper {
+            padding-top: 10px;
             &:before {
                 background-color: #EDEDED;
             }

@@ -29,7 +29,7 @@
 
 .skip-search {
 
-    &:not(.skip-active):hover {
+    &.skip-active:hover {
         .icon {
             background-position: -50+4px (-150px + ($toolbar-icon-padding-offset/2));
         }
@@ -57,6 +57,13 @@
 
 #header-search {
     padding: 20px;
+
+}
+
+@include bp(max-width, $bp-medium) {
+    #header-search{
+        margin-top: 44px;
+    }
 }
 
 // ---------------------------------------------
@@ -71,6 +78,7 @@
         width: 25%;
         height: 50px;
         padding: 0;
+        padding-right: $box-spacing;
     }
 
 }

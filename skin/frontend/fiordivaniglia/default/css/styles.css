@@ -3212,13 +3212,15 @@ body {
  * ============================================ */
 @media only screen and (min-width: 771px) {
   .page-header {
-    max-width: 1340px;
     margin: 0 auto;
-    padding: 0 30px;
   }
 
-  .page-header-container {
+  .page-header-container .page-header-container-inner {
+    max-width: 1280px;
+    margin: 0 auto;
     position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .header-language-container,
@@ -3356,11 +3358,17 @@ a.skip-link {
 
 .skip-link:not(.skip-active):hover {
   opacity: 0.8;
+  color: #FBFBFB;
 }
 
 @media only screen and (max-width: 770px) {
   .skip-link {
     border-right: 1px solid #EDEDED;
+    background: #CBA9CB;
+    color: #FBFBFB;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
 
   .skip-link:last-child {
@@ -3471,10 +3479,10 @@ a.skip-link {
 .skip-nav {
   width: 40%;
 }
-.skip-nav:not(.skip-active):hover {
+.skip-nav.skip-active:hover {
   text-decoration: none;
 }
-.skip-nav:not(.skip-active):hover .icon {
+.skip-nav.skip-active:hover .icon {
   background-position: -46px 4px;
 }
 
@@ -3508,7 +3516,13 @@ a.skip-link {
   #header-nav {
     display: block;
     /* Force visibility */
-    border-bottom: 1px solid #EDEDED;
+    background-color: #CBA9CB;
+  }
+  #header-nav .header-nav-inner {
+    max-width: 1280px;
+    /*border-bottom: 1px solid $c-module-border-light;*/
+    margin: auto;
+    line-height: 1.2em;
   }
 }
 /* ============================================ *
@@ -3528,11 +3542,20 @@ a.skip-link {
   position: relative;
   display: block;
   color: #636363;
-  line-height: 30px;
+  line-height: 45px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .nav-primary li {
   position: relative;
+}
+.nav-primary li.level0 > a {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: #FBFBFB;
+}
+.nav-primary li.level0.menu-active > a {
+  color: #CBA9CB;
 }
 .nav-primary li.level1 a {
   border-bottom: 1px solid #CCCCCC;
@@ -3553,13 +3576,17 @@ a.skip-link {
 @media only screen and (max-width: 770px) {
   .nav-primary a.level0,
   .nav-primary a {
-    line-height: 35px;
+    line-height: 50px;
   }
   .nav-primary li.level0 ul {
     display: none;
   }
   .nav-primary li.level0 li {
     padding: 0 0 0 25px;
+  }
+  .nav-primary li.level0 > a {
+    color: #636363;
+    font-size: 12px;
   }
   .nav-primary li.level1 a {
     padding: 0 15px 0 25px;
@@ -3605,6 +3632,7 @@ a.skip-link {
  * ============================================ */
 @media only screen and (min-width: 771px) {
   .nav-primary {
+    padding-left: 30px;
     /* Default styles for 1+ drop-down menus */
     /* Level 2+ */
     /* Class for js to add briefly to evaluate element positioning. */
@@ -3628,13 +3656,14 @@ a.skip-link {
   .nav-primary .menu-active {
     z-index: 200;
     background-color: #FBF8FB;
+    color: #CBA9CB;
   }
   .nav-primary li.level0 ul {
     background: #FBF8FB;
     border: solid 1px #CCCCCC;
     position: absolute;
     left: 0;
-    top: 30px;
+    top: 45px;
     /* Height of ".nav-primary a.level0" */
     z-index: 10;
     width: 250px;
@@ -3677,6 +3706,11 @@ a.skip-link {
     margin-top: -3px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .nav-primary {
+    padding-left: 0px;
+  }
+}
 .nav-primary li.menu-active > ul {
   display: block;
 }
@@ -3684,7 +3718,7 @@ a.skip-link {
 /* ============================================ *
  * Search - Skip Link
  * ============================================ */
-.skip-search:not(.skip-active):hover .icon {
+.skip-search.skip-active:hover .icon {
   background-position: -46px -146px;
 }
 .skip-search .icon {
@@ -3703,6 +3737,11 @@ a.skip-link {
   padding: 20px;
 }
 
+@media only screen and (max-width: 770px) {
+  #header-search {
+    margin-top: 44px;
+  }
+}
 @media only screen and (min-width: 771px) {
   #header-search {
     display: block;
@@ -3712,6 +3751,7 @@ a.skip-link {
     width: 25%;
     height: 50px;
     padding: 0;
+    padding-right: 10px;
   }
 }
 /* ============================================ *
@@ -3771,7 +3811,7 @@ a.skip-link {
 /* -------------------------------------------- *
  * Skip Link - Account
  */
-.skip-account:not(.skip-active):hover .icon {
+.skip-account.skip-active:hover .icon {
   background-position: -46px -44px;
 }
 .skip-account .icon {
@@ -3817,6 +3857,11 @@ a.skip-link {
   padding: 5px 0;
 }
 
+@media only screen and (max-width: 770px) {
+  #header-account {
+    margin-top: 44px;
+  }
+}
 #header-account a {
   position: relative;
   display: block;
@@ -3835,7 +3880,7 @@ a.skip-link {
 /* -------------------------------------------- *
  * Skip Link - Cart
  */
-.skip-cart:not(.skip-active):hover .icon {
+.skip-cart.skip-active:hover .icon {
   background-position: -50px -95px;
 }
 .skip-cart .icon {
@@ -4023,7 +4068,6 @@ a.skip-link {
    */
 }
 .footer .footer-inner {
-  max-width: 1340px;
   margin: auto;
 }
 .footer .block-title {
@@ -4066,6 +4110,10 @@ a.skip-link {
   text-align: center;
   background-color: #FBF8FB;
   padding-top: 30px;
+}
+.footer .block-subscribe .block-subscribe-inner {
+  max-width: 1340px;
+  margin: auto;
 }
 .footer .block-subscribe .privacy-box {
   text-transform: none;
@@ -4226,7 +4274,7 @@ a.skip-link {
     text-align: center;
   }
   .footer .block-subscribe .input-text {
-    width: 93%;
+    width: 80%;
     margin: 0;
   }
 }
@@ -9617,6 +9665,9 @@ div.paypal-logo span > img {
 @media only screen and (max-width: 770px) {
   .header-minicart .subtotal .label {
     color: #636363;
+  }
+  .header-minicart .minicart-wrapper {
+    padding-top: 10px;
   }
   .header-minicart .minicart-wrapper:before {
     background-color: #EDEDED;

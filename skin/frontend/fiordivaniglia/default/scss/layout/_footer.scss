@@ -41,7 +41,6 @@
     width: 100%;
 
     .footer-inner{
-        max-width: $max-container-width;
         margin: auto;
     }
     .block-title {
@@ -84,6 +83,7 @@
     .links:first-of-type {
         margin-left: 0;
     }
+
     .block-subscribe {
         float: left;
         width: 100%;
@@ -91,6 +91,11 @@
         text-align: center;
         background-color: $c-module-background;
         padding-top: $trim;
+
+        .block-subscribe-inner{
+            max-width: $max-container-width;
+            margin: auto;
+        }
 
 
     }
@@ -268,7 +273,7 @@
         }
 
         .block-subscribe .input-text {
-            width: 93%;
+            width: 80%;
             margin: 0;
 
         }

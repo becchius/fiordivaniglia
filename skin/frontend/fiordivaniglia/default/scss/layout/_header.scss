@@ -30,13 +30,18 @@
 @include bp(min-width, $bp-medium + 1) {
 
     .page-header {
-        max-width: $max-container-width;
-        margin: 0 auto;
-        padding: 0 $trim;
+       margin: 0 auto;
+
     }
 
     .page-header-container {
-        position: relative;
+        .page-header-container-inner {
+            max-width: $max-content-width;
+            margin: 0 auto;
+            position: relative;
+            padding-top: $box-spacing;
+            padding-bottom: $box-spacing;
+        }
     }
 
 }
@@ -201,7 +206,8 @@ a.skip-link {
 }
 
 .skip-link:not(.skip-active):hover {
-    opacity: 0.8;
+    opacity: 1;
+    color: $c-text-white;
 }
 
 // ---------------------------------------------
@@ -210,6 +216,12 @@ a.skip-link {
 
     .skip-link {
         border-right: 1px solid #EDEDED;
+        background: $c-action;
+        color: $c-text-white;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+
     }
 
     .skip-link:last-child {

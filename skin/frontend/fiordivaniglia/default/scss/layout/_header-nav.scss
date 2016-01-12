@@ -30,7 +30,7 @@
 .skip-nav {
     width: 40%;
 
-    &:not(.skip-active):hover {
+    &.skip-active:hover {
         text-decoration: none;
 
         .icon {
@@ -86,7 +86,14 @@
 
     #header-nav {
         display: block; /* Force visibility */
-        border-bottom: 1px solid $c-module-border-light;
+        background-color: $c-action;
+        .header-nav-inner{
+            max-width: $max-content-width;
+            /*border-bottom: 1px solid $c-module-border-light;*/
+            margin: auto;
+            line-height: 1.2em;
+
+        }
     }
 
 }
@@ -107,7 +114,7 @@
  * General Navigation Styles
  * ============================================ */
 
-$nav-primary-height: 30px;
+$nav-primary-height: 45px;
 
 .nav-primary {
     a {
@@ -117,12 +124,21 @@ $nav-primary-height: 30px;
         color: $c-text;
         line-height: $nav-primary-height;
         font-family: $f-stack-special;
+
     }
 
     li {
         position: relative;
     }
-
+    li.level0 > a{
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 18px;
+        color: $c-text-white;
+    }
+    li.level0.menu-active > a{
+         color: $c-action;
+    }
     li.level1 a {
         border-bottom: 1px solid $c-module-border;
     }
@@ -149,7 +165,7 @@ $nav-primary-height: 30px;
         // Increase clickable area of anchors for small viewports
         a.level0,
         a {
-            line-height: $nav-primary-height + 5px;
+           line-height: $nav-primary-height + 5px;
         }
 
         // Hide all sub-menus
@@ -160,6 +176,12 @@ $nav-primary-height: 30px;
         // Indent sub-menus
         li.level0 li {
             padding: 0 0 0 25px;
+        }
+
+        li.level0 > a{
+            color: $c-text;
+            font-size: 12px;
+
         }
 
         li.level1 a {
@@ -199,6 +221,7 @@ $nav-primary-height: 30px;
 
     .nav-primary {
 
+        padding-left: $trim;
         a.level0 {
             padding: 0 25px;
         }
@@ -220,6 +243,7 @@ $nav-primary-height: 30px;
         .menu-active {
             z-index: 200;
             background-color: $c-module-background;
+            color: $c-action;
         }
 
         /* Default styles for 1+ drop-down menus */
@@ -270,6 +294,11 @@ $nav-primary-height: 30px;
                 margin-top: -3px;
             }
         }
+    }
+}
+@include bp(min-width,$bp-xlarge+1){
+    .nav-primary{
+        padding-left: 0px;
     }
 }
 

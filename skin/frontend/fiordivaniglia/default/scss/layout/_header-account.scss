@@ -33,7 +33,7 @@
 
 .skip-account {
 
-    &:not(.skip-active):hover {
+    &.skip-active:hover {
         .icon {
             background-position: -50px+4px (-50px + ($toolbar-icon-padding-offset/2) + 2px);
         }
@@ -90,6 +90,11 @@
 
 #header-account {
     padding: 5px 0;
+}
+@include bp(max-width, $bp-medium) {
+    #header-account{
+        margin-top: 44px;
+    }
 }
 
 #header-account a {
