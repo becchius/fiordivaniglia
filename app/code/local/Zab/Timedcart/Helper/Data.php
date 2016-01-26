@@ -1,0 +1,40 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: andrea.becchio
+ * Date: 13/01/2016
+ * Time: 18:09
+ */ 
+class Zab_Timedcart_Helper_Data extends Mage_Core_Helper_Abstract {
+
+    public function getExpireDatetime($now){
+        $diff = intval(Mage::getStoreConfig('zab_timedcart/general/timeout_product'));
+        if(!$diff){
+            return false;
+        }
+        $nowDate = new DateTime($now);
+        $exp = $nowDate->add(new DateInterval('PT'.$diff.'S'));
+        return $exp->format("Y-m-d H:i:s");
+
+
+    }
+
+    public function isActiveTimeout(){
+        return Mage::getStoreConfig('zab_timedcart/general/active');
+    }
+
+    public function checkDeletedItemd($quote){
+
+        if($deleted = Mage::getModel('zab_timedcart/timedcart_item')->getDeletedItems($quote->getId())){
+            if(count($deleted)==1){
+                $message = Mage::helper('zab_timedcart')->__("%s has been removed from cart because your reservation expired");
+            }else{
+                $message = Mage::helper('zab_timedcart')->__("%s have been removed from cart because your reservation expired");
+
+            }
+            Mage::getSingleton('checkout/session')->addError(sprintf($message,implode(", ",$deleted)));
+        }
+
+        return $this;
+    }
+}

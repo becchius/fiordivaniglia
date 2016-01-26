@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zab_Timedcart>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Zab_Timedcart>
+    </modules>
+</config>

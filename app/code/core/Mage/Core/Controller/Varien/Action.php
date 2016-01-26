@@ -527,6 +527,7 @@ abstract class Mage_Core_Controller_Varien_Action
         Mage::dispatchEvent('controller_action_predispatch', array('controller_action' => $this));
         Mage::dispatchEvent('controller_action_predispatch_' . $this->getRequest()->getRouteName(),
             array('controller_action' => $this));
+        Mage::log($this->getFullActionName());
         Mage::dispatchEvent('controller_action_predispatch_' . $this->getFullActionName(),
             array('controller_action' => $this));
     }
