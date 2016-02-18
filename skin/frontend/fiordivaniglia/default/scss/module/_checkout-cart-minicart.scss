@@ -55,7 +55,7 @@
         display: none;
     }
     .block-subtitle {
-        color: $c-action;
+        color: $c-text-primary;
         font-family: $f-stack-special;
         font-size: 10px;
         font-weight: bold;
@@ -103,7 +103,7 @@
             font-weight: bold;
 
             a {
-                color: $c-action;
+                color: $c-text-primary;
             }
         }
     }

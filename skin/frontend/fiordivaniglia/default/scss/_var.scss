@@ -106,8 +106,8 @@ $c-text: #636363;
 $c-text-gray: #A0A0A0;
 $c-text-white: #FBFBFB;
 // Primary font color for headings and other non-link text
-$c-text-primary: $c-pink;
-$c-text-primary-title: darken($c-text-primary,15%);
+$c-text-primary: darken($c-pink,15%);
+$c-text-primary-title: darken($c-text-primary,5%);
 
 
 // Interaction

@@ -181,7 +181,7 @@
 
         li {
             cursor: pointer;
-            color: $c-action;
+            color: $c-text-primary;
             margin-bottom: 3px;
         }
     }
@@ -189,7 +189,7 @@
     .truncated {
         .details {
             background: none;
-            color: $c-action;
+            color: $c-text-primary;
         }
     }
 

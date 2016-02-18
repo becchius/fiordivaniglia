@@ -649,13 +649,15 @@ h6, .h6 {
 .page-title h2,
 .product-name h1,
 .product-name .h1 {
-  text-transform: uppercase;
-  font-size: 32px;
+  text-transform: none;
+  font-size: 36pt;
+  letter-spacing: 4px;
   font-weight: 600;
-  color: #d37172;
+  color: #cd5d5f;
   border-bottom: 1px solid #EDEDED;
   padding-bottom: 3px;
   margin-bottom: 15px;
+  font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
 }
 
 /* -------------------------------------------- *
@@ -689,7 +691,7 @@ h6, .h6 {
   line-height: 1.4;
   text-rendering: optimizeSpeed;
   text-transform: uppercase;
-  color: #e5abac;
+  color: #d37172;
   margin-bottom: 0;
   text-transform: uppercase;
   font-weight: 600;
@@ -764,7 +766,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .block-account li strong,
 .block-cms-menu li strong {
   font-weight: 400;
-  color: #e5abac;
+  color: #d37172;
 }
 .block-account li a,
 .block-cms-menu li a {
@@ -772,7 +774,7 @@ body:not(.customer-account) .block:first-child .block-title {
 }
 .block-account li a:hover,
 .block-cms-menu li a:hover {
-  color: #e5abac;
+  color: #d37172;
 }
 
 /* ============================================ *
@@ -1013,7 +1015,7 @@ a.button:hover {
 }
 
 .breadcrumbs a:hover {
-  color: #e5abac;
+  color: #d37172;
 }
 
 .breadcrumbs strong {
@@ -1050,7 +1052,7 @@ a.button:hover {
 
 .btn-remove:after {
   content: 'X';
-  color: #e5abac;
+  color: #d37172;
   height: 20px;
   line-height: 20px;
   width: 100%;
@@ -1318,7 +1320,7 @@ a.button:hover {
  * Promotional Message Banner
  */
 .promo-msg {
-  color: #e5abac;
+  color: #d37172;
   text-align: center;
   margin: 10px;
   text-transform: uppercase;
@@ -1547,7 +1549,7 @@ a.button:hover {
 }
 
 .price-box .price {
-  color: #e5abac;
+  color: #d37172;
   font-size: 16px;
 }
 
@@ -1564,7 +1566,7 @@ a.button:hover {
 
 .price-box .minimal-price-link {
   padding-left: 1em;
-  color: #e5abac;
+  color: #d37172;
   display: block;
   /* We want this to show on its own line, otherwise the layout looks funky */
 }
@@ -1594,7 +1596,7 @@ a.button:hover {
 }
 
 .price-box .special-price {
-  color: #e5abac;
+  color: #d37172;
   padding-left: 1em;
 }
 .price-box .special-price .price-label {
@@ -1987,7 +1989,7 @@ span.weee {
   width: 25px;
   height: 30px;
   padding: 0;
-  color: #e5abac;
+  color: #d37172;
   font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
@@ -2861,7 +2863,7 @@ a.skip-link {
 
 .skip-link:not(.skip-active):hover {
   opacity: 1;
-  color: #FBFBFB;
+  color: #d37172;
 }
 
 .skip-link {
@@ -2992,10 +2994,10 @@ a.skip-link {
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 18px;
-  color: #e5abac;
+  color: #d37172;
 }
 .nav-primary li.level0.menu-active > a {
-  color: #e5abac;
+  color: #d37172;
 }
 .nav-primary li.level1 a {
   border-bottom: 1px solid #CCCCCC;
@@ -3036,12 +3038,12 @@ a.skip-link {
 }
 .nav-primary a:hover,
 .nav-primary li:hover > a {
-  color: #e5abac;
+  color: #d37172;
 }
 .nav-primary .menu-active {
   z-index: 200;
   background-color: #f6ebeb;
-  color: #e5abac;
+  color: #d37172;
 }
 .nav-primary li.level0 ul {
   background: #f6ebeb;
@@ -3200,6 +3202,10 @@ a.skip-link {
   text-transform: uppercase;
 }
 
+.skip-account:hover {
+  color: #d37172;
+}
+
 #header-account.skip-active {
   background: #f6ebeb;
   border: solid 1px #CCCCCC;
@@ -3219,7 +3225,7 @@ a.skip-link {
 }
 
 #header-account a:hover {
-  color: #e5abac;
+  color: #d37172;
 }
 
 /* -------------------------------------------- *
@@ -3238,7 +3244,7 @@ a.skip-link {
 }
 
 #header-account a:hover {
-  color: #e5abac;
+  color: #d37172;
 }
 
 /* ============================================ *
@@ -3257,6 +3263,10 @@ a.skip-link {
 .skip-cart {
   width: auto;
   padding: 0 10px;
+}
+
+.skip-cart:hover {
+  color: #d37172;
 }
 
 #header-cart.skip-active {
@@ -3301,7 +3311,7 @@ a.skip-link {
 }
 
 .skip-cart {
-  color: #e5abac;
+  color: #d37172;
   text-transform: uppercase;
 }
 .skip-cart:hover {
@@ -3326,7 +3336,7 @@ a.skip-link {
 
 .skip-cart .count,
 .skip-link.skip-active .count {
-  color: #e5abac;
+  color: #d37172;
 }
 
 .skip-cart .count.empty {
@@ -3449,7 +3459,7 @@ a.skip-link {
 }
 .footer .block-title,
 .footer address {
-  color: #e5abac;
+  color: #d37172;
 }
 .footer .links {
   float: left;
@@ -3467,7 +3477,7 @@ a.skip-link {
   color: #636363;
 }
 .footer .links a:hover {
-  color: #e5abac;
+  color: #d37172;
 }
 .footer .links:first-of-type {
   margin-left: 0;
@@ -3680,7 +3690,7 @@ h3.product-name a:hover,
 h4.product-name a:hover,
 h5.product-name a:hover,
 p.product-name a:hover {
-  color: #e5abac;
+  color: #d37172;
   text-decoration: none;
 }
 
@@ -4209,7 +4219,7 @@ p.product-name a:hover {
   border-left: 0;
   border-right: 0;
   background: none;
-  color: #e5abac;
+  color: #d37172;
   font-weight: bold;
 }
 .block-layered-nav .block-content > dl > dt:after {
@@ -4292,7 +4302,7 @@ p.product-name a:hover {
 }
 .product-view .product-shop .product-name .h1,
 .product-view .product-img-box .produproct-name h1 {
-  color: #d37172;
+  color: #cd5d5f;
   margin-bottom: 10px;
   border: 0;
 }
@@ -4350,7 +4360,7 @@ p.product-name a:hover {
 .product-view .product-shop .price-box .regular-price .price,
 .product-view .product-shop .price-box .special-price .price,
 .product-view .product-shop .price-box .full-product-price .price {
-  color: #e5abac;
+  color: #d37172;
   font-size: 24px;
 }
 .product-view .product-shop .price-box .special-price .price-label {
@@ -4687,7 +4697,7 @@ p.product-name a:hover {
 }
 .product-collateral .toggle-tabs li.current span,
 .product-collateral .toggle-tabs li:hover span {
-  color: #e5abac;
+  color: #d37172;
 }
 .product-collateral .toggle-tabs li:last-child {
   border-right: 1px solid #CCCCCC;
@@ -4752,7 +4762,7 @@ p.product-name a:hover {
 }
 
 .grouped-items-table .name-wrapper {
-  color: #e5abac;
+  color: #d37172;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .grouped-items-table .qty-wrapper {
@@ -5478,7 +5488,7 @@ p.product-name a:hover {
   display: block;
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
-  border-right: 6px solid #e5abac;
+  border-right: 6px solid #d37172;
   border-left: none;
   position: absolute;
   top: 3px;
@@ -5492,7 +5502,7 @@ p.product-name a:hover {
   display: block;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
-  border-top: 6px solid #e5abac;
+  border-top: 6px solid #d37172;
   border-bottom: none;
   right: -15px;
   top: 6px;
@@ -5732,7 +5742,7 @@ p.product-name a:hover {
  * Checkout - Cart Cross sell
  * ============================================ */
 .crosssell h2 {
-  color: #e5abac;
+  color: #d37172;
 }
 .crosssell .item a.product-image {
   width: auto;
@@ -5849,7 +5859,7 @@ p.product-name a:hover {
 
 .opc .section.allow .step-title:hover h2,
 .opc .section.active .step-title h2 {
-  color: #e5abac;
+  color: #d37172;
 }
 
 .opc .section .step-title h2 {
@@ -6458,7 +6468,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .product-view .product-options .swatch-attr .select-label {
   display: inline;
   font-weight: normal;
-  color: #e5abac;
+  color: #d37172;
   padding-left: 5px;
 }
 .product-view .product-options dd .input-box {
@@ -7092,7 +7102,7 @@ div.paypal-logo span > img {
   display: none;
 }
 #customer-reviews h2 {
-  color: #d37172;
+  color: #cd5d5f;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -7571,12 +7581,12 @@ div.paypal-logo span > img {
 }
 #wishlist-table .giftregisty-add li {
   cursor: pointer;
-  color: #e5abac;
+  color: #d37172;
   margin-bottom: 3px;
 }
 #wishlist-table .truncated .details {
   background: none;
-  color: #e5abac;
+  color: #d37172;
 }
 #wishlist-table td[data-rwd-label]:before {
   font-weight: 600;
@@ -7663,7 +7673,7 @@ div.paypal-logo span > img {
   display: none;
 }
 .header-minicart .block-subtitle {
-  color: #e5abac;
+  color: #d37172;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
   font-weight: bold;
@@ -7705,7 +7715,7 @@ div.paypal-logo span > img {
   font-weight: bold;
 }
 .header-minicart .product-details .product-name a {
-  color: #e5abac;
+  color: #d37172;
 }
 .header-minicart .info-wrapper {
   margin-bottom: 0.5em;
@@ -7715,7 +7725,7 @@ div.paypal-logo span > img {
   padding-right: 10px;
 }
 .header-minicart .info-wrapper td {
-  color: #e5abac;
+  color: #d37172;
   clear: right;
 }
 .header-minicart .info-wrapper .qty-wrapper td {
@@ -7757,7 +7767,7 @@ div.paypal-logo span > img {
   text-transform: uppercase;
 }
 .header-minicart .subtotal .price {
-  color: #d37172;
+  color: #cd5d5f;
 }
 .header-minicart .minicart-actions {
   padding: 10px;
@@ -7955,11 +7965,11 @@ div.paypal-logo span > img {
 }
 .cms-page-view .std h1,
 .cms-no-route .std h1 {
-  color: #e5abac;
+  color: #d37172;
 }
 .cms-page-view .std h2,
 .cms-no-route .std h2 {
-  color: #e5abac;
+  color: #d37172;
 }
 .cms-page-view .std li,
 .cms-no-route .std li {

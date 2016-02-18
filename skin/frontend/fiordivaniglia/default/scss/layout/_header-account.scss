@@ -59,6 +59,7 @@
     }
 
     .skip-account:hover {
+        color: $c-text-primary;
     }
 
     #header-account.skip-active {
@@ -79,7 +80,7 @@
     }
 
     #header-account a:hover {
-        color: $c-action;
+        color: $c-text-primary;
     }
 
 }
@@ -106,6 +107,6 @@
 }
 
 #header-account a:hover {
-    color: $c-action;
+    color: $c-text-primary;
 }
 

@@ -54,6 +54,7 @@
     }
 
     .skip-cart:hover {
+        color: $c-text-primary;
     }
 
     #header-cart.skip-active {
@@ -108,7 +109,7 @@
 
 @include bp(min-width, $bp-medium + 1) {
     .skip-cart {
-        color: $c-action;
+        color: $c-text-primary;
         text-transform: uppercase;
 
         &:hover {
@@ -133,7 +134,7 @@
     }
     .skip-cart .count,
     .skip-link.skip-active .count {
-        color: $c-action;
+        color: $c-text-primary;
     }
 }
 

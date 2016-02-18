@@ -301,14 +301,14 @@ body:not(.customer-account) .block:first-child .block-title {
 
         strong {
             font-weight: 400;
-            color: $c-action;
+            color: $c-text-primary;
         }
 
         a {
             color: $c-text;
 
             &:hover {
-                color: $c-action;
+                color: $c-text-primary;
             }
         }
     }
@@ -609,7 +609,7 @@ a.button:hover {
 }
 
 .breadcrumbs a:hover {
-    color: $c-action;
+    color: $c-text-primary;
 }
 
 .breadcrumbs strong {
@@ -656,7 +656,7 @@ a.button:hover {
 .btn-remove {
     &:after {
         content: 'X';
-        color: $c-action;
+        color: $c-text-primary;
         height: 20px;
         line-height: 20px;
         width: 100%;
@@ -1719,7 +1719,7 @@ $toolbar-icon-padding-offset: 8px;
     width: 25px;
     height: 30px;
     padding: 0;
-    color: $c-action;
+    color: $c-text-primary;
     font-family: $f-stack-sans;
 }
 

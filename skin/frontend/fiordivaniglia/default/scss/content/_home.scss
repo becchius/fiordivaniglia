@@ -233,20 +233,21 @@ body .promos > li {
     min-height: 0 !important;
 }
 .std .widget-new-products .widget-title {
-    border-top: 1px solid $c-divider-border;
+   margin-top:  $trim;
+    margin-bottom: 50px;
 
 }
 .std .widget-new-products h2 {
 
     text-align: center;
-    color: $c-action;
+    color: $c-text-primary;
     margin-bottom: 10px;
     font-family: $f-stack-coursive;
     font-size: 32pt;
     text-transform: capitalize;
     letter-spacing: 5px;
     width: 25%;
-    margin-top: -30px;
+    margin-top: -100px;
     background-color: white;
     z-index: 2;
     margin-left: auto;
