@@ -110,7 +110,7 @@ body .promos > li {
     list-style: none;
     text-align: center;
     position: relative;
-    border: 1px solid $c-module-border;
+    border: none;
     @include not-selectable;
 }
 
@@ -170,7 +170,10 @@ body .promos > li {
     .promos > li:nth-child(2n) {
         margin-right: 0;
     }
+
 }
+
+
 
 @include bp(min-width, 880px) {
     .promos span {
@@ -180,7 +183,19 @@ body .promos > li {
     .promos strong {
         font-size: 24px;
     }
+    .middle{
+        padding-top: 7%;
+        padding-bottom: 30px;
+    }
 }
+
+@include bp(min-width,$bp-large+1){
+    .middle{
+        padding-top: 10%;
+        padding-bottom: 30px;
+    }
+}
+
 
 /* -------------------------------------------- *
  * New Products Section
@@ -217,14 +232,46 @@ body .promos > li {
     padding-bottom: 0 !important;
     min-height: 0 !important;
 }
+.std .widget-new-products .widget-title {
+    border-top: 1px solid $c-divider-border;
+
+}
 .std .widget-new-products h2 {
+
     text-align: center;
     color: $c-action;
-    font-weight: bold;
     margin-bottom: 10px;
+    font-family: $f-stack-coursive;
+    font-size: 32pt;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    width: 25%;
+    margin-top: -30px;
+    background-color: white;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
 }
 .std .widget-new-products .products-grid .product-image{
     width: 100%;
     margin-left: 0px;
 }
 
+.corsivo{
+    font-family: $f-stack-coursive;
+    font-size: 22pt;
+    letter-spacing: 4px;
+    color: $c-text-primary-title;
+    text-transform: none;
+
+}
+
+.corsivo.piccolo{
+    font-size: 22px;
+    letter-spacing: 3px;
+
+}
+
+.std p.corsivo{
+    margin-bottom: 5px;
+}

@@ -136,11 +136,22 @@ class Zab_Timedcart_Model_Observer extends Varien_Object
     }
 
     public function checkProductStatus($observer){
+        $product = $observer->getProduct();
+        $salable = $observer->getSalable()->getIsSalable();
+        if($product->getTypeId()!='simple' || !$salable){
+            return $this;
+        }
+         $status = Mage::getModel('zab_timedcart/timedcart_item')->checkProductStatusByProdId($product->getId());
+        $status = $status['status'];
+        if($status != Zab_Timedcart_Model_Timedcart_Item::RESERVATION_STATUS_FREE) {
+            $observer->getSalable()->setIsSalable(false);
+        }
+        return $this;
 
     }
 
-    public function __call($method, $args)
-    {
+    public function __call($method, $args){
+
        if(!Mage::helper('zab_timedcart')->isActiveTimeout()){
             return $this;
         }

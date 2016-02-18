@@ -112,7 +112,7 @@ body .promos > li {
   list-style: none;
   text-align: center;
   position: relative;
-  border: 1px solid #CCCCCC;
+  border: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -182,6 +182,17 @@ body .promos > li {
   .promos strong {
     font-size: 24px;
   }
+
+  .middle {
+    padding-top: 7%;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .middle {
+    padding-top: 10%;
+    padding-bottom: 30px;
+  }
 }
 /* -------------------------------------------- *
  * New Products Section
@@ -198,7 +209,7 @@ body .promos > li {
 .cms-index-index h2.subtitle {
   padding: 6px 0;
   text-align: center;
-  color: #CBA9CB;
+  color: #e5abac;
   font-weight: 600;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #CCCCCC;
@@ -218,16 +229,46 @@ body .promos > li {
   min-height: 0 !important;
 }
 
+.std .widget-new-products .widget-title {
+  border-top: 1px solid #ECECEC;
+}
+
 .std .widget-new-products h2 {
   text-align: center;
-  color: #CBA9CB;
-  font-weight: bold;
+  color: #e5abac;
   margin-bottom: 10px;
+  font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
+  font-size: 32pt;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  width: 25%;
+  margin-top: -30px;
+  background-color: white;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .std .widget-new-products .products-grid .product-image {
   width: 100%;
   margin-left: 0px;
+}
+
+.corsivo {
+  font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
+  font-size: 22pt;
+  letter-spacing: 4px;
+  color: #d37172;
+  text-transform: none;
+}
+
+.corsivo.piccolo {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.std p.corsivo {
+  margin-bottom: 5px;
 }
 
 /* ============================================ *
@@ -259,7 +300,7 @@ body .promos > li {
 }
 
 .catblocks li:hover {
-  border-color: #CBA9CB;
+  border-color: #e5abac;
 }
 
 @media only screen and (max-width: 770px) {

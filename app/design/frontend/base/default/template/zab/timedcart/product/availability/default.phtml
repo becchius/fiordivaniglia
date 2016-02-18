@@ -1,0 +1,67 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php /* @var $this Mage_Catalog_Block_Product_View_Abstract */?>
+<?php $_product = $this->getProduct() ?>
+<?php if ($this->displayProductStockStatus()): ?>
+    <?php if ($_product->isSalable()): ?>
+        <p class="availability in-stock">
+            <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+            <span class="value"><?php echo $this->helper('catalog')->__('In stock') ?></span>
+        </p>
+    <?php else: ?>
+        <?php if($_product->isAvailable()):?>
+            <?php $status = Mage::helper('zab_timedcart')->getProductStatus($_product);
+                    if($status['status']==Zab_Timedcart_Model_Timedcart_Item::RESERVATION_STATUS_RESERVED):?>
+                        <p class="availability reserved">
+                            <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+                            <span class="value"><?php echo $this->helper('catalog')->__('Reserved') ?></span>
+
+                        </p>
+                        <p class="message"><?php echo $this->__('Product may return available in: ')?><span id="countdown"></span></p>
+                           <div id="timer"/>
+                            <script type="text/javascript">
+                                jQuery(document).ready(function() {
+
+                                    jQuery('#timer').countdown('<?php echo $status['exp_date'];?>', function (event) {
+                                        var a = event.strftime(' %H:%M:%S');
+                                        console.log(a);
+                                        jQuery('#countdown').text( a);
+                                    }).on('finish.countdown', function(event) {
+                                        document.location.reload();
+                                    });
+                                });
+                            </script>
+                        <?php else:?>
+                        <p class="availability in-cart"><?php echo $this->__('Product is already in your cart')?></p>
+                    <?php endif;?>
+        <?php else:?>
+            <p class="availability out-of-stock">
+                <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+                <span class="value"><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
+            </p>     <?php endif; ?>
+    <?php endif; ?>
+<?php endif; ?>

@@ -79,29 +79,29 @@
             <controller_action_predispatch_checkout_onepage_saveorder>
                 <observers>
                     <zab_timedcart>
-                    <type>singleton</type>
-                    <class>zab_timedcart/observer</class>
-                    <method>extendTimer</method>
+                        <type>singleton</type>
+                        <class>zab_timedcart/observer</class>
+                        <method>extendTimer</method>
                     </zab_timedcart>
                 </observers>
             </controller_action_predispatch_checkout_onepage_saveorder>
             <controller_action_predispatch_checkout_cart_index>
-                    <observers>
-                        <zab_timedcart>
+                <observers>
+                    <zab_timedcart>
                         <type>singleton</type>
                         <class>zab_timedcart/observer</class>
                         <method>checkDeletedItems</method>
-                        </zab_timedcart>
-                    </observers>
+                    </zab_timedcart>
+                </observers>
             </controller_action_predispatch_checkout_cart_index>
             <sales_model_service_quote_submit_failure>
-                    <observers>
-                        <zab_timedcart>
+                <observers>
+                    <zab_timedcart>
                         <type>singleton</type>
                         <class>zab_timedcart/observer</class>
                         <method>revertTimer</method>
-                        </zab_timedcart>
-                    </observers>
+                    </zab_timedcart>
+                </observers>
             </sales_model_service_quote_submit_failure>
             <catalog_product_is_salable_after>
                 <observers>
@@ -115,6 +115,15 @@
 
         </events>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <zab_timedcart>
+                    <file>zab/timedcart.xml</file>
+                </zab_timedcart>
+            </updates>
+        </layout>
+    </frontend>
     <default>
         <zab_timedcart>
             <general>

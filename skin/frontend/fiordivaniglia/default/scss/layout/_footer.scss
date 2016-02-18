@@ -39,7 +39,8 @@
 .footer {
     clear: both;
     width: 100%;
-
+    background: linear-gradient(to right, white 50%,rgba(246, 235, 235, 0.35) 50%);
+    background-size: 48px;
     .footer-inner{
         margin: auto;
     }
@@ -51,6 +52,15 @@
 
     .block-title strong {
         font-weight: normal;
+        font-family: $f-stack-coursive;
+        text-transform: none;
+        font-size: 22pt;
+
+    }
+    .block-title strong.nl {
+        font-size: 32pt;
+        letter-spacing: 4px;
+
     }
 
     .block-title,
@@ -85,12 +95,14 @@
     }
 
     .block-subscribe {
+        margin-bottom: 0px;
         float: left;
         width: 100%;
         padding-bottom: $trim;
         text-align: center;
         background-color: $c-module-background;
-        padding-top: $trim;
+        padding-top: 0px;
+        line-height: 1.5em;
 
         .block-subscribe-inner{
             max-width: $max-container-width;
@@ -221,7 +233,7 @@
         text-align: center;
         width: 100%;
         font-size: $f-size-xxs;
-        margin-top: $trim;
+        margin-top: 0px;
         padding: 15px 0;
         background-color: $c-action;
         color:$c-text-white;
@@ -241,7 +253,7 @@
         .block-subscribe {
             clear: both;
             float: none;
-            margin: 0 auto $trim auto;
+            margin: 0 auto 0 auto;
         }
     }
 
@@ -279,3 +291,6 @@
         }
     }
 }
+
+
+

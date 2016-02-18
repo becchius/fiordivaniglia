@@ -37,4 +37,15 @@ class Zab_Timedcart_Helper_Data extends Mage_Core_Helper_Abstract {
 
         return $this;
     }
+
+    public function getProductStatus($prod){
+        $quote = Mage::getSingleton('checkout/session')->getQuote();
+        if($quote->getId()){
+            if($quote->getItemByProduct($prod)){
+                return array('status'=>Zab_Timedcart_Model_Timedcart_Item::RESERVATION_STATUS_IN_CART);
+            }
+
+        }
+        return Mage::getModel('zab_timedcart/timedcart_item')->checkProductStatusByProdId($prod->getId());
+    }
 }

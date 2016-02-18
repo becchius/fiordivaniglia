@@ -89,7 +89,7 @@ $max-std-formatted-width: 50em;
 
 $c-blue: #3399CC;
 $c-green: #11B400;
-$c-pink: #CBA9CB;
+$c-pink: #e5abac;
 $c-orange: #F3793B;
 $c-red: #CF5050;
 $c-yellow: #FFDD15;
@@ -139,7 +139,7 @@ $c-divider-border: #ECECEC;
 
 // Buttons
 
-$c-button: #a9abcb;
+$c-button: #906E6F;
 $c-button-hover: darken($c-button, 5%);
 $c-button-active: darken($c-button, 10%);
 
@@ -179,9 +179,9 @@ $c-link-active: darken($c-action, (5% / 2));
 
 // Module (generic)
 
-$c-module-background: #FBF8FB;
+$c-module-background: #f6ebeb;
 $c-module-background-hover: shade($c-module-background, 3%);
-$c-module-background-secondary: lighten(#a9abcb,20%);
+$c-module-background-secondary: darken($c-module-background,5%);
 $c-module-background-dark: #AAAAAA;
 // This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
 $c-module-border: #CCCCCC;
@@ -223,7 +223,7 @@ $c-email-highlighted-border: #FFF74C;
 $f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif;
 $f-stack-serif: Georgia, Times, 'Times New Roman', serif;
 $f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;
-
+$f-stack-coursive: 'cac_champagneregular', 'Helvetica Neue', Verdana, Arial, coursive;
 $f-stack-default: $f-stack-sans;
 
 // Font Sizes

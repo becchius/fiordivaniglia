@@ -32,14 +32,15 @@
     display: block;
     width: 100%;
     margin: $gap 0;
-    border: 1px solid $c-module-border-light;
+    border: none;
 
     .slideshow {
         width: 100%;
         padding: 0;
         position: relative;
         margin: 0;
-        border: 10px solid #FFFFFF;
+        border: none;
+        padding-bottom: $gap;
         & > li {
             position: absolute;
             top: 0;

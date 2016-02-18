@@ -40,6 +40,18 @@
 @viewport {
     width: device-width;
 }
+@font-face {
+    font-family: 'cac_champagneregular';
+    src: url('../font/cac_champagne-webfont.eot');
+    src: url('../font/cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/cac_champagne-webfont.woff') format('woff'),
+    url('../font/cac_champagne-webfont.ttf') format('truetype'),
+    url('../font/cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 // Prevent 300ms delay in IE on touch devices
 a, button {
@@ -1910,6 +1922,16 @@ body.customer-account .data-table {
 .width-full {
     width: 100%;
 }
+
+.curveLight path{
+    fill: $c-module-background;
+    stroke: $c-module-background;
+}
+.curvePink path {
+    fill: $c-action;
+    stroke: $c-action;
+}
+
 
 /* ============================================ *
  * Custom Helpers

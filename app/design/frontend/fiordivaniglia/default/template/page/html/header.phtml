@@ -41,6 +41,9 @@
 </div>
 
 <header id="header" class="page-header">
+    <svg class="curvePink down" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
+    </svg>
     <div class="page-header-container">
         <div class="page-header-container-inner">
             <a class="logo" href="<?php echo $this->getUrl('') ?>">
@@ -93,7 +96,10 @@
         </div>
 
         <!-- Navigation -->
+        <svg class="curveLight up" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
 
+        </svg>
         <div id="header-nav" class="skip-content">
             <div class="header-nav-inner">
                 <?php echo $this->getChildHtml('topMenu') ?>
@@ -102,7 +108,6 @@
 
 
     </div>
-</header>
-
+  </header>
 
 <?php echo $this->getChildHtml('topContainer'); ?>

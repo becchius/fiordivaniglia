@@ -50,6 +50,12 @@
 .page-header {
     font-family: $f-stack-special;
 }
+ header.page-header{
+     background: linear-gradient(to right, white 50%,rgba(246, 235, 235, 0.35) 50%);
+     background-size: 48px;
+     line-height: 0;
+
+ }
 
 /* ============================================ *
  * Language switcher + welcome message
@@ -195,7 +201,6 @@
     float: left;
     width: 20%;
     height: 44px;
-    background: #FFFFFF;
     color: $c-text;
     line-height: 42px;
     text-align: center;

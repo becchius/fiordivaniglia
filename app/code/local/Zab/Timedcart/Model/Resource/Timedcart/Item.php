@@ -14,13 +14,15 @@ class Zab_Timedcart_Model_Resource_Timedcart_Item extends Mage_Core_Model_Resour
     }
 
     public function checkProductStatus($prodId,$quoteId,$qty){
+
+        $now = now();
         $sel = $this->getReadConnection()->select()
             ->from(array('ti'=>$this->getMainTable()),array(
                 "expire_datetime"=>new Zend_Db_Expr('MIN(ti.expire_datetime)'),
                 "needs"=>new Zend_Db_Expr("(SUM(ti.qty) + {$qty}) -inv.qty")))
             ->join(array('inv'=>$this->getTable('cataloginventory/stock_item')),"ti.product_id = inv.product_id",array())
             ->where("ti.product_id = ?",$prodId)
-           ->where("ti.expire_datetime > now()")
+           ->where("ti.expire_datetime > ?",$now)
             ->where('ti.is_active = ?',1)
             ->where('ti.quote_id <> ?',$quoteId)
             ->group('ti.product_id')

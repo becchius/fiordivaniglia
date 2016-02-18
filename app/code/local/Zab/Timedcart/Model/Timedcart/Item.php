@@ -4,27 +4,27 @@
  * User: andrea.becchio
  * Date: 14/01/2016
  * Time: 07:37
- */ 
+ */
 class Zab_Timedcart_Model_Timedcart_Item extends Mage_Core_Model_Abstract
 {
     const RESERVATION_STATUS_FREE = 0;
     const RESERVATION_STATUS_RESERVED = 1;
     const RESERVATION_STATUS_EXPIRED = 2;
-
+    const RESERVATION_STATUS_IN_CART = 3;
     protected function _construct()
     {
         $this->_init('zab_timedcart/timedcart_item');
     }
 
     public function setQuoteItem(Mage_Sales_Model_Quote_Item $item){
-           $this->setQuoteItemId($item->getId());
-            $this->setQuoteId($item->getQuoteId());
-            $this->setProductId($item->getProductId());
-            $this->setStoreId($item->getStoreId());
-            $this->setQty($item->getQty());
-            $this->setIsActive(true);
-            $expireDateTime = Mage::helper('zab_timedcart')->getExpireDatetime(now());
-            $this->setExpireDatetime($expireDateTime);
+        $this->setQuoteItemId($item->getId());
+        $this->setQuoteId($item->getQuoteId());
+        $this->setProductId($item->getProductId());
+        $this->setStoreId($item->getStoreId());
+        $this->setQty($item->getQty());
+        $this->setIsActive(true);
+        $expireDateTime = Mage::helper('zab_timedcart')->getExpireDatetime(now());
+        $this->setExpireDatetime($expireDateTime);
 
 
 
@@ -95,7 +95,7 @@ class Zab_Timedcart_Model_Timedcart_Item extends Mage_Core_Model_Abstract
         }
         $data = $this->getExpireStoreDate();
 
-                return $data;
+        return $data;
 
 
     }
@@ -159,6 +159,24 @@ class Zab_Timedcart_Model_Timedcart_Item extends Mage_Core_Model_Abstract
             $i->delete();
         }
         return $toRet;
-}
+    }
+
+    public function checkProductStatusByProdId($prodId){
+        $status = $this->_getResource()->checkProductStatus($prodId,0,1);
+        $toRet = array();
+        if($status){
+            $toRet['status']=self::RESERVATION_STATUS_RESERVED;
+           $date = new DateTime($status,new DateTimeZone('UTC'));
+            $date->setTimezone(new DateTimeZone( Mage::app()->getStore()->getConfig('general/locale/timezone')));
+            $toRet['exp_date']=$date->format('Y/m/d H:i:s');
+        }else{
+            $toRet['status']=self::RESERVATION_STATUS_FREE;
+
+        }
+
+
+        return $toRet;
+
+    }
 
 }
