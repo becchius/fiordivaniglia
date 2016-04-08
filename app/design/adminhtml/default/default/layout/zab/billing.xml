@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_creditmemo_new>
+        <reference name="adjustments">
+            <action method="setTemplate"><template>zab/billing/order/creditmemo/create/totals/adjustments.phtml</template></action>
+        </reference>
+</adminhtml_sales_order_creditmemo_new>
+    <adminhtml_sales_order_creditmemo_updateqty>
+        <reference name="adjustments">
+            <action method="setTemplate"><template>zab/billing/order/creditmemo/create/totals/adjustments.phtml</template></action>
+        </reference>
+    </adminhtml_sales_order_creditmemo_updateqty>
+</layout>

@@ -38,7 +38,7 @@
                     if($status['status']==Zab_Timedcart_Model_Timedcart_Item::RESERVATION_STATUS_RESERVED):?>
                         <p class="availability reserved">
                             <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
-                            <span class="value"><?php echo $this->helper('catalog')->__('Reserved') ?></span>
+                            <span class="value"><?php echo $this->helper('zab_timedcart')->__('Reserved') ?></span>
 
                         </p>
                         <p class="message"><?php echo $this->__('Product may return available in: ')?><span id="countdown"></span></p>
@@ -48,7 +48,7 @@
 
                                     jQuery('#timer').countdown('<?php echo $status['exp_date'];?>', function (event) {
                                         var a = event.strftime(' %H:%M:%S');
-                                        console.log(a);
+                                       // console.log(a);
                                         jQuery('#countdown').text( a);
                                     }).on('finish.countdown', function(event) {
                                         document.location.reload();

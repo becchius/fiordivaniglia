@@ -171,7 +171,9 @@ body .promos > li {
         margin-right: 0;
     }
 
+
 }
+
 
 
 
@@ -183,16 +185,52 @@ body .promos > li {
     .promos strong {
         font-size: 24px;
     }
-    .middle{
-        padding-top: 7%;
-        padding-bottom: 30px;
+
+}
+.middle-content{
+    width: 100%;
+    margin-top: -62%;
+    padding-left: $trim;
+    padding-right: $trim;
+    position: absolute;
+}
+.middle{
+    position: relative;
+    padding: 0;
+}
+@include bp(min-width , $bp-xlarge + 1) {
+    .middle-content{
+        margin-top: -59%;
+    }
+    .middle-content .corsivo{
+        font-size: 23pt;
+        letter-spacing: 4px;
     }
 }
 
-@include bp(min-width,$bp-large+1){
-    .middle{
-        padding-top: 10%;
-        padding-bottom: 30px;
+@include bp(max-width, $bp-xsmall){
+
+    .middle-content{
+        padding-left: $trim-small;
+        padding-right: $trim-small;
+        margin-top: -62%;
+    }
+    .middle-content .corsivo{
+        font-size: 16pt;
+    }
+    .middle-content .corsivo-piccolo{
+        font-size: 16px;
+    }
+}
+
+@include bp(max-width, $bp-medium){
+
+    .middle-content{
+        margin-top: -55%;
+    }
+    .middle-content .corsivo{
+        font-size: 24pt;
+        letter-spacing: 4px;
     }
 }
 
@@ -261,7 +299,7 @@ body .promos > li {
 .corsivo{
     font-family: $f-stack-coursive;
     font-size: 22pt;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     color: $c-text-primary-title;
     text-transform: none;
 

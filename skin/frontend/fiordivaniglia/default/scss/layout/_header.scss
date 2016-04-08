@@ -35,12 +35,13 @@
     }
 
     .page-header-container {
+        margin-top: -10px;
         .page-header-container-inner {
             max-width: $max-content-width;
             margin: 0 auto;
             position: relative;
-            padding-top: $box-spacing;
-            padding-bottom: $box-spacing;
+            padding-top: 0;
+            padding-bottom: 0;
         }
     }
 
@@ -131,7 +132,7 @@
 .logo {
     display: block;
     float: left;
-    width: 65%;
+    width: 75%;
     min-width: 100px;
     min-height: 44px;
     text-align: center;
@@ -158,8 +159,12 @@
 @include bp(min-width, $bp-medium + 1) {
 
     .logo {
-        max-width: 300px;
-        min-height: 90px;
+        max-width: 350px;
+        min-height: 78px;
+        padding-left: $gap;
+        padding-right: $gap;
+        padding-bottom: 0;
+        padding-top: 0;
 
         .small {
             display: none;

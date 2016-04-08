@@ -68,12 +68,12 @@ class Zab_Timedcart_Model_Observer extends Varien_Object
                 continue;
             }
             if($ti->isExpired()){
-                $message = "Product " . $item->getProduct()->getName() . " has expired.";
+                $message = sprintf(Mage::helper("zab_timedcart")->__("%s reservation expired."),$item->getProduct()->getName());
 
 
             }else {
 
-                $message = "Product " . $item->getProduct()->getName() . "expires at ".$ti->getFormattedExpireDate();
+                $message = sprintf(Mage::helper("zab_timedcart")->__("%s reservation will expire at %s."),$item->getProduct()->getName(),$ti->getFormattedExpireDate());
 
             }
 

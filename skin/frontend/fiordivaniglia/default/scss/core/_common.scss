@@ -121,6 +121,7 @@ h6, .h6 { @include h6; }
     margin-bottom: 0;
     font-size: $f-size-s;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .availability .label {
@@ -129,6 +130,10 @@ h6, .h6 { @include h6; }
 
 .availability.in-stock {
     color: $c-success;
+}
+
+.availability.reserved {
+    color: $c-warn;
 }
 
 .availability.available-soon,

@@ -622,6 +622,7 @@ h6, .h6 {
   margin-bottom: 0;
   font-size: 13px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .availability .label {
@@ -630,6 +631,10 @@ h6, .h6 {
 
 .availability.in-stock {
   color: #11B400;
+}
+
+.availability.reserved {
+  color: #E26703;
 }
 
 .availability.available-soon,
@@ -3234,12 +3239,15 @@ body {
     margin: 0 auto;
   }
 
+  .page-header-container {
+    margin-top: -10px;
+  }
   .page-header-container .page-header-container-inner {
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 .header-language-container,
@@ -3316,7 +3324,7 @@ header.page-header {
 .logo {
   display: block;
   float: left;
-  width: 65%;
+  width: 75%;
   min-width: 100px;
   min-height: 44px;
   text-align: center;
@@ -3338,8 +3346,12 @@ header.page-header {
 
 @media only screen and (min-width: 771px) {
   .logo {
-    max-width: 300px;
-    min-height: 90px;
+    max-width: 350px;
+    min-height: 78px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
   .logo .small {
     display: none;
@@ -5121,6 +5133,13 @@ p.product-name a:hover {
   content: '';
   display: table;
   clear: both;
+}
+.product-view .product-essential .extra-info .message {
+  font-size: 16px;
+  font-weight: bold;
+}
+.product-view .product-essential .extra-info .message #countdown {
+  color: #11B400;
 }
 .product-view .product-essential:after {
   content: '';

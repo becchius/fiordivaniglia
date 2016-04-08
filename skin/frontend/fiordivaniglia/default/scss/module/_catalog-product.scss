@@ -46,6 +46,14 @@
                     @include clearfix;
                 }
             }
+            .message{
+                font-size: $f-size-xl;
+                font-weight: bold;
+
+                #countdown{
+                    color: $c-success;
+                }
+            }
         }
 
         &:after {

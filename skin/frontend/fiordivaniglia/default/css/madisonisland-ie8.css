@@ -159,14 +159,17 @@ body .promos > li {
   font-size: 24px;
 }
 
-.middle {
-  padding-top: 7%;
-  padding-bottom: 30px;
+.middle-content {
+  width: 100%;
+  margin-top: -62%;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
 }
 
 .middle {
-  padding-top: 10%;
-  padding-bottom: 30px;
+  position: relative;
+  padding: 0;
 }
 
 /* -------------------------------------------- *
@@ -233,7 +236,7 @@ body .promos > li {
 .corsivo {
   font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
   font-size: 22pt;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   color: #cd5d5f;
   text-transform: none;
 }

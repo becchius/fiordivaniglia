@@ -182,16 +182,53 @@ body .promos > li {
   .promos strong {
     font-size: 24px;
   }
+}
+.middle-content {
+  width: 100%;
+  margin-top: -62%;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+}
 
-  .middle {
-    padding-top: 7%;
-    padding-bottom: 30px;
+.middle {
+  position: relative;
+  padding: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .middle-content {
+    margin-top: -59%;
+  }
+
+  .middle-content .corsivo {
+    font-size: 23pt;
+    letter-spacing: 4px;
   }
 }
-@media only screen and (min-width: 980px) {
-  .middle {
-    padding-top: 10%;
-    padding-bottom: 30px;
+@media only screen and (max-width: 479px) {
+  .middle-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: -62%;
+  }
+
+  .middle-content .corsivo {
+    font-size: 16pt;
+  }
+
+  .middle-content .corsivo-piccolo {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .middle-content {
+    margin-top: -55%;
+  }
+
+  .middle-content .corsivo {
+    font-size: 24pt;
+    letter-spacing: 4px;
   }
 }
 /* -------------------------------------------- *
@@ -258,7 +295,7 @@ body .promos > li {
 .corsivo {
   font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
   font-size: 22pt;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   color: #cd5d5f;
   text-transform: none;
 }

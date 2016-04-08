@@ -123,6 +123,13 @@
                 </zab_timedcart>
             </updates>
         </layout>
+        <translate>
+            <modules>
+                <zab_timedcart>
+                    <files><default>Zab_Timedcart.csv</default></files>
+                </zab_timedcart>
+            </modules>
+        </translate>
     </frontend>
     <default>
         <zab_timedcart>
