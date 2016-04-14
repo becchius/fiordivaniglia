@@ -1,0 +1,28 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: andrea.becchio
+ * Date: 08/04/2016
+ * Time: 18:26
+ */
+$exp = Mage::helper('zab_timedcart')->getMinExpDate();
+
+if($exp):?>
+    <div class="countdown-container">
+        <p class="message"><?php echo $this->__('Checkout in ')?><span id="countdown"></span><?php echo $this->__(' to be sure to get all products!');?></p>
+        <div id="timer"></div>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+
+                jQuery('#timer').countdown('<?php echo $exp?>', function (event) {
+                    var a = event.strftime(' %H:%M:%S');
+                    // console.log(a);
+                    jQuery('#countdown').text( a);
+
+                }).on('finish.countdown', function(event) {
+                    document.location.reload();
+                });
+            });
+        </script>
+    </div>
+<?php endif;?>

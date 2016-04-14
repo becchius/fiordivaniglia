@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <config>
 	  <tabs>
-		<sevenlike translate="label" module="zab_billing">
-            <label>Sevenlike</label>
+		<zab translate="label" module="zab_billing">
+            <label>Zab</label>
             <sort_order>100</sort_order>
-        </sevenlike>
+        </zab>
 	  </tabs>
 	  <sections>
 		<zab_billing  translate="label" module="zab_billing">
 		<label>Fatturazione</label>
-		<tab>sevenlike</tab>
+		<tab>zab</tab>
 		<frontend_type>text</frontend_type>
 		<sort_order>0</sort_order>
 		<show_in_default>1</show_in_default>

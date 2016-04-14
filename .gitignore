@@ -2,3 +2,4 @@ media/catalog/*
 var/*
 .idea
 skin/frontend/fiordivaniglia/default/scss/.sass-cache/
+.sass-cache

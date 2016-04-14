@@ -156,7 +156,24 @@
         margin-bottom: 6px;
         margin-right: 10px;
     }
+
 }
+.cart  .countdown-container{
+     padding: $trim-small;
+     width: 100%;
+
+     p.message{
+         font-size: $f-size-xxl;
+         text-align: center;
+
+         #countdown{
+             color: $c-warn;
+             font-weight: bold;
+         }
+     }
+ }
+
+
 
 .checkout-types {
     float: right;

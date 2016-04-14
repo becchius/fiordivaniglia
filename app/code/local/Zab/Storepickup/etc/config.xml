@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zab_Storepickup>
+            <version>1.0.0</version>
+        </Zab_Storepickup>
+    </modules>
+    <global>
+        <models>
+            <zab_storepickup>
+                <class>Zab_Storepickup_Model</class>
+                <resourceModel>zab_storepickup_resource</resourceModel>
+            </zab_storepickup>
+            <zab_storepickup_resource>
+                <class>Zab_Storepickup_Model_Resource</class>
+            </zab_storepickup_resource>
+        </models>
+        <blocks>
+            <zab_storepickup>
+                <class>Zab_Storepickup_Block</class>
+            </zab_storepickup>
+        </blocks>
+        <helpers>
+            <zab_storepickup>
+                <class>Zab_Storepickup_Helper</class>
+            </zab_storepickup>
+        </helpers>
+        <resources>
+            <zab_storepickup_setup>
+                <setup>
+                    <module>Zab_Storepickup</module>
+                </setup>
+            </zab_storepickup_setup>
+        </resources>
+    </global>
+</config>

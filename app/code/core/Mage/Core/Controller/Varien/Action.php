@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Core
- * @copyright  Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -527,7 +527,6 @@ abstract class Mage_Core_Controller_Varien_Action
         Mage::dispatchEvent('controller_action_predispatch', array('controller_action' => $this));
         Mage::dispatchEvent('controller_action_predispatch_' . $this->getRequest()->getRouteName(),
             array('controller_action' => $this));
-        Mage::log($this->getFullActionName());
         Mage::dispatchEvent('controller_action_predispatch_' . $this->getFullActionName(),
             array('controller_action' => $this));
     }

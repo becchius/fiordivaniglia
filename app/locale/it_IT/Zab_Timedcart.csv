@@ -2,3 +2,8 @@
 "Product may return available in: ","Potrebbe tornare disponibile tra: "
 "%s reservation expired.","La prenotazione su %s è scaduta."
 "%s reservation will expire at %s.","La prenotazione su %s scadrà il %s."
+"Checkout in ","Vai alla cassa entro "
+" to be sure to get all products!"," per assicurarti tutti i prodotti!"
+"%s has been removed from cart because your reservation expired","%s è stato rimosso dal carrello perchè la prenotazione è scaduta"
+"%s have been removed from cart because your reservation expired","%s sono stati rimossi dal carrello perchè la prenotazione è scaduta"
+"Product is already in your cart","Il prodotto è già nel carrello"

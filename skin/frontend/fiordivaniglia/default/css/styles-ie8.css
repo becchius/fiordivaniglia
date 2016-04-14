@@ -5349,6 +5349,19 @@ p.product-name a:hover {
   margin-right: 10px;
 }
 
+.cart .countdown-container {
+  padding: 15px;
+  width: 100%;
+}
+.cart .countdown-container p.message {
+  font-size: 18px;
+  text-align: center;
+}
+.cart .countdown-container p.message #countdown {
+  color: #E26703;
+  font-weight: bold;
+}
+
 .checkout-types {
   float: right;
   text-align: right;
