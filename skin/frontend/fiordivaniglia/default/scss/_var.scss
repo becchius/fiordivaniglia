@@ -89,7 +89,7 @@ $max-std-formatted-width: 50em;
 
 $c-blue: #3399CC;
 $c-green: #11B400;
-$c-pink: #e5abac;
+$c-coral: #CD5B45;
 $c-orange: #F3793B;
 $c-red: #CF5050;
 $c-yellow: #FFDD15;
@@ -106,14 +106,14 @@ $c-text: #636363;
 $c-text-gray: #A0A0A0;
 $c-text-white: #FBFBFB;
 // Primary font color for headings and other non-link text
-$c-text-primary: darken($c-pink,15%);
+$c-text-primary: darken($c-coral,15%);
 $c-text-primary-title: darken($c-text-primary,5%);
 
 
 // Interaction
 
-$c-action: $c-pink;
-$c-stimulus: darken($c-pink, 15%);
+$c-action: $c-coral;
+$c-stimulus: darken($c-coral, 15%);
 $c-subtle: #A0A0A0;
 
 // Notifications
@@ -139,13 +139,13 @@ $c-divider-border: #ECECEC;
 
 // Buttons
 
-$c-button: #906E6F;
+$c-button: #DEB887;
 $c-button-hover: darken($c-button, 5%);
 $c-button-active: darken($c-button, 10%);
 
 // Secondary Buttons
 
-$c-button-secondary: $c-pink;
+$c-button-secondary: $c-coral;
 $c-button-secondary-hover: darken($c-button-secondary, 5%);
 $c-button-secondary-active: darken($c-button-secondary, 10%);
 
@@ -154,7 +154,7 @@ $c-button-subtle: #ECECEC;
 // Forms
 
 $c-input-border: #C0C0C0;
-$c-input-border-focus: $c-pink;
+$c-input-border-focus: $c-coral;
 
 $c-input-placeholder: $c-text-gray;
 $c-input-text: $c-text;
@@ -164,7 +164,7 @@ $c-fieldset-border-light: #EDEDED;
 
 // Headings
 
-$c-h1: $c-pink;
+$c-h1: $c-coral;
 $c-h2: $c-text;
 $c-h3: $c-text;
 $c-h4: $c-text;
@@ -179,7 +179,7 @@ $c-link-active: darken($c-action, (5% / 2));
 
 // Module (generic)
 
-$c-module-background: #f6ebeb;
+$c-module-background: #FF7256;
 $c-module-background-hover: shade($c-module-background, 3%);
 $c-module-background-secondary: darken($c-module-background,5%);
 $c-module-background-dark: #AAAAAA;
@@ -188,7 +188,7 @@ $c-module-border: #CCCCCC;
 // This should be applied whenever the border is wrapping an element with $c-module-background
 $c-module-border-light: #EDEDED;
 $c-module-border-dark: #777777;
-$c-module-border-highlight: $c-pink;
+$c-module-border-highlight: $c-coral;
 
 
 // Table

@@ -246,7 +246,7 @@ body .promos > li {
 .cms-index-index h2.subtitle {
   padding: 6px 0;
   text-align: center;
-  color: #d37172;
+  color: #9c3c2a;
   font-weight: 600;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #CCCCCC;
@@ -273,7 +273,7 @@ body .promos > li {
 
 .std .widget-new-products h2 {
   text-align: center;
-  color: #d37172;
+  color: #9c3c2a;
   margin-bottom: 10px;
   font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
   font-size: 32pt;
@@ -296,7 +296,7 @@ body .promos > li {
   font-family: "cac_champagneregular", "Helvetica Neue", Verdana, Arial, coursive;
   font-size: 22pt;
   letter-spacing: 3px;
-  color: #cd5d5f;
+  color: #883424;
   text-transform: none;
 }
 
@@ -338,7 +338,7 @@ body .promos > li {
 }
 
 .catblocks li:hover {
-  border-color: #e5abac;
+  border-color: #CD5B45;
 }
 
 @media only screen and (max-width: 770px) {

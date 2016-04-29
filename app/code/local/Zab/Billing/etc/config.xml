@@ -254,7 +254,7 @@
         <layout>
             <updates>
                 <zab_billing>
-                    <file>szab/billing.xml</file>
+                    <file>zab/billing.xml</file>
                 </zab_billing>
             </updates>
         </layout>

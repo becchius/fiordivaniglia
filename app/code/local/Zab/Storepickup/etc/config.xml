@@ -11,6 +11,11 @@
                 <class>Zab_Storepickup_Model</class>
                 <resourceModel>zab_storepickup_resource</resourceModel>
             </zab_storepickup>
+            <sales>
+                <rewrite>
+                    <quote_address_rate>Zab_Storepickup_Model_Quote_Address_Rate</quote_address_rate>
+                </rewrite>
+            </sales>
             <zab_storepickup_resource>
                 <class>Zab_Storepickup_Model_Resource</class>
             </zab_storepickup_resource>
@@ -25,12 +30,62 @@
                 <class>Zab_Storepickup_Helper</class>
             </zab_storepickup>
         </helpers>
-        <resources>
-            <zab_storepickup_setup>
-                <setup>
-                    <module>Zab_Storepickup</module>
-                </setup>
-            </zab_storepickup_setup>
-        </resources>
+        <events>
+            <sales_convert_quote_address_to_order_address>
+                <observers>
+                    <zab_storepickup>
+                        <type>singleton</type>
+                        <class>zab_storepickup/observer</class>
+                        <method>updateShippingAddress</method>
+                    </zab_storepickup>
+                </observers>
+            </sales_convert_quote_address_to_order_address>
+        </events>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <zab_storepickup>
+                    <file>zab/storepickup.xml</file>
+                </zab_storepickup>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Zab_Storepickup>
+                    <files>
+                        <default>Zab_Storepickup.csv</default>
+                    </files>
+                </Zab_Storepickup>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Zab_Storepickup>
+                    <files>
+                        <default>Zab_Storepickup.csv</default>
+                    </files>
+                </Zab_Storepickup>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <carriers>
+            <zabstorepickup>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>zab_storepickup/carrier_storepickup</model>
+                <name>In Store</name>
+                <price>5.00</price>
+                <title>Pickup</title>
+                <type>O</type>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this
+                    shipping method, please contact us.
+                </specificerrmsg>
+                <handling_type>F</handling_type>
+            </zabstorepickup>
+        </carriers>
+    </default>
 </config>
