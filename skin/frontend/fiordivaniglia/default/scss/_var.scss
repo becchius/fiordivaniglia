@@ -89,14 +89,17 @@ $max-std-formatted-width: 50em;
 
 $c-blue: #3399CC;
 $c-green: #11B400;
-$c-coral: #CD5B45;
+$c-coral:#C62931;
+$c-green1: #91D5BB;//#C8EADD;
 $c-orange: #F3793B;
 $c-red: #CF5050;
 $c-yellow: #FFDD15;
 $c-black: #000000;
 $c-gray: #333333;
-
-// =============================================
+$c-righe:rgba(251,198,198,0.21);
+$c-pink:rgba(251,198,198,1);
+$c-pink-dark: darken($c-pink,10%);
+  // =============================================
 // Base Colors
 // =============================================
 
@@ -106,14 +109,14 @@ $c-text: #636363;
 $c-text-gray: #A0A0A0;
 $c-text-white: #FBFBFB;
 // Primary font color for headings and other non-link text
-$c-text-primary: darken($c-coral,15%);
+$c-text-primary: $c-coral;//darken($c-coral,15%);
 $c-text-primary-title: darken($c-text-primary,5%);
 
 
 // Interaction
 
-$c-action: $c-coral;
-$c-stimulus: darken($c-coral, 15%);
+$c-action: $c-green1;
+$c-stimulus: darken($c-green1, 15%);
 $c-subtle: #A0A0A0;
 
 // Notifications
@@ -139,13 +142,13 @@ $c-divider-border: #ECECEC;
 
 // Buttons
 
-$c-button: #DEB887;
+$c-button: $c-pink-dark;
 $c-button-hover: darken($c-button, 5%);
 $c-button-active: darken($c-button, 10%);
 
 // Secondary Buttons
 
-$c-button-secondary: $c-coral;
+$c-button-secondary: $c-green1;
 $c-button-secondary-hover: darken($c-button-secondary, 5%);
 $c-button-secondary-active: darken($c-button-secondary, 10%);
 
@@ -179,7 +182,7 @@ $c-link-active: darken($c-action, (5% / 2));
 
 // Module (generic)
 
-$c-module-background: #FF7256;
+$c-module-background: #FFFFFF;
 $c-module-background-hover: shade($c-module-background, 3%);
 $c-module-background-secondary: darken($c-module-background,5%);
 $c-module-background-dark: #AAAAAA;
@@ -193,7 +196,7 @@ $c-module-border-highlight: $c-coral;
 
 // Table
 
-$c-table-background: #FBF8FB;
+$c-table-background: $c-righe;
 $c-table-border: #CCCCCC;
 
 $c-table-zebra-odd: #F8F7F5;
@@ -201,7 +204,7 @@ $c-table-zebra-even: #EEEDED;
 
 // Tabs
 
-$c-tabs-background: #F0F0F0;
+$c-tabs-background: $c-righe;
 
 // Email
 $c-email-background: #EBEBEB;

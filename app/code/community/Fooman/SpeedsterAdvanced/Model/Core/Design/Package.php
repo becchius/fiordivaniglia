@@ -203,11 +203,11 @@ class Fooman_SpeedsterAdvanced_Model_Core_Design_Package extends Mage_Core_Model
         array_shift($filePathComponents);
 
         if ($isJsPath) {
-            $jsPath = implode(DS, $filePathComponents);
-            $prependRelativePath = Mage::getStoreConfig('web/unsecure/base_js_url') . $jsPath . DS;
+            $jsPath = implode("/", $filePathComponents);
+            $prependRelativePath = Mage::getStoreConfig('web/unsecure/base_js_url') . $jsPath . "/";
         } else {
-            $skinPath = implode(DS, $filePathComponents);
-            $prependRelativePath = Mage::getStoreConfig('web/unsecure/base_skin_url') . $skinPath . DS;
+            $skinPath = implode("/", $filePathComponents);
+            $prependRelativePath = Mage::getStoreConfig('web/unsecure/base_skin_url') . $skinPath . "/";
         }
 
         //we might be on windows but instructions in layout updates use / as directory separator

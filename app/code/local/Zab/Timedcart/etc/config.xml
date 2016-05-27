@@ -29,6 +29,11 @@
             <zab_timedcart>
                 <class>Zab_Timedcart_Helper</class>
             </zab_timedcart>
+            <catalog>
+                <rewrite>
+                    <product_compare>Zab_Timedcart_Helper_Product_Compare</product_compare>
+                </rewrite>
+            </catalog>
         </helpers>
         <resources>
             <zab_timedcart_setup>
