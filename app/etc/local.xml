@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[fiordivaniglia]]></username>
-                    <password><![CDATA[A31!AF£$Qgfds!]]></password>
+                    <password><![CDATA[A31!AF$Qgfds!]]></password>
                     <dbname><![CDATA[fiordivaniglia]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
