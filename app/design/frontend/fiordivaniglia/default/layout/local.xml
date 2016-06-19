@@ -40,6 +40,13 @@
             </block>
         </reference>
     </cms_index_index>
+    <cms_index_noroute>
+        <reference name="cms_page">
+            <block type="core/text_list" name="hp_product_list" as="hp_product_list" translate="label">
+                <label>HP product list</label>
+            </block>
+        </reference>
+    </cms_index_noroute>
     <catalog_cateogory_layered>
         <reference name="root">
             <action method="setTemplate">
