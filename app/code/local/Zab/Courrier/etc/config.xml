@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zab_Courrier>
+            <version>1.0.0</version>
+        </Zab_Courrier>
+    </modules>
+    <global>
+        <models>
+            <zab_courrier>
+                <class>Zab_Courrier_Model</class>
+                <resourceModel>zab_courrier_resource</resourceModel>
+            </zab_courrier>
+            <zab_courrier_resource>
+                <class>Zab_Courrier_Model_Resource</class>
+            </zab_courrier_resource>
+        </models>
+        <blocks>
+            <zab_courrier>
+                <class>Zab_Courrier_Block</class>
+            </zab_courrier>
+        </blocks>
+        <helpers>
+            <zab_courrier>
+                <class>Zab_Courrier_Helper</class>
+            </zab_courrier>
+        </helpers>
+    </global>
+    <default>
+
+        <carriers>
+            <courrier>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <condition_name>package_weight</condition_name>
+                <include_virtual_price>1</include_virtual_price>
+                <model>zab_courrier/carrier_courrier</model>
+                <name>Corriere Espresso</name>
+                <title>SDA</title>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping
+                    method, please contact us.
+                </specificerrmsg>
+                <handling_type>F</handling_type>
+                <enable_assicurazione>1</enable_assicurazione>
+                <assic_fee>5</assic_fee>
+                <assic_name>SDA assicurata</assic_name>
+            </courrier>
+        </carriers>
+    </default>
+</config>

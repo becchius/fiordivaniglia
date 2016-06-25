@@ -42,8 +42,8 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[fiordivaniglia]]></username>
-                    <password><![CDATA[A31!AF$Qgfds!]]></password>
-                    <dbname><![CDATA[fiordivaniglia]]></dbname>
+                    <password><![CDATA[!AGtgqr03ad$aAqta?]]></password>
+                    <dbname><![CDATA[fiordivaniglia_magento]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>

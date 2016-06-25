@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zab_Courrier>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Zab_Courrier>
+    </modules>
+</config>

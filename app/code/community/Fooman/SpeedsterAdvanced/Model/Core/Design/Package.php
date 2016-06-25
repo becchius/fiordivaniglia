@@ -204,10 +204,12 @@ class Fooman_SpeedsterAdvanced_Model_Core_Design_Package extends Mage_Core_Model
 
         if ($isJsPath) {
             $jsPath = implode("/", $filePathComponents);
-            $prependRelativePath = Mage::getStoreConfig('web/unsecure/base_js_url') . $jsPath . "/";
+            $prependRelativePath = Mage::getBaseUrl('js') . $jsPath . "/";
+
         } else {
             $skinPath = implode("/", $filePathComponents);
-            $prependRelativePath = Mage::getStoreConfig('web/unsecure/base_skin_url') . $skinPath . "/";
+            $prependRelativePath =Mage::getBaseUrl('skin'). $skinPath . "/fake/";
+            Mage::log($prependRelativePath,null,'k.log');
         }
 
         //we might be on windows but instructions in layout updates use / as directory separator
@@ -269,10 +271,10 @@ class Fooman_SpeedsterAdvanced_Model_Core_Design_Package extends Mage_Core_Model
 
         if ($isJsPath) {
             $jsPath = implode(DS, $filePathComponents);
-            $prependRelativePath = Mage::getStoreConfig('web/secure/base_js_url') . $jsPath . DS;
+            $prependRelativePath =Mage::getBaseUrl('js') . $jsPath . DS;
         } else {
             $skinPath = implode(DS, $filePathComponents);
-            $prependRelativePath = Mage::getStoreConfig('web/secure/base_skin_url') . $skinPath . DS;
+            $prependRelativePath = Mage::getBaseUrl('skin')  . $skinPath . DS;
         }
         //we might be on windows but instructions in layout updates use / as directory separator
         if (DS != '/') {

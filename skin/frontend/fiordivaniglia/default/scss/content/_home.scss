@@ -207,22 +207,6 @@ body .promos > li {
         letter-spacing: 4px;
     }
 }
-
-@include bp(max-width, $bp-xsmall){
-
-    .middle-content{
-        padding-left: $trim-small;
-        padding-right: $trim-small;
-        margin-top: -62%;
-    }
-    .middle-content .corsivo{
-        font-size: 16pt;
-    }
-    .middle-content .corsivo-piccolo{
-        font-size: 16px;
-    }
-}
-
 @include bp(max-width, $bp-medium){
 
     .middle-content{
@@ -233,6 +217,24 @@ body .promos > li {
         letter-spacing: 4px;
     }
 }
+
+@include bp(max-width, $bp-xsmall){
+
+    .middle-content{
+        padding-left: $trim-small;
+        padding-right: $trim-small;
+        margin-top: -64%;
+    }
+    .middle-content .corsivo{
+        font-size: 16pt;
+        letter-spacing: 2px;
+    }
+    .middle-content .corsivo.piccolo{
+        font-size: 14pt;
+        letter-spacing: 1px;
+    }
+}
+
 
 
 /* -------------------------------------------- *
