@@ -47,6 +47,7 @@
             </block>
         </reference>
     </cms_index_noroute>
+
     <catalog_cateogory_layered>
         <reference name="root">
             <action method="setTemplate">
