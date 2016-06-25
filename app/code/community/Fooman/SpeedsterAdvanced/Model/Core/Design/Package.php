@@ -208,8 +208,12 @@ class Fooman_SpeedsterAdvanced_Model_Core_Design_Package extends Mage_Core_Model
 
         } else {
             $skinPath = implode("/", $filePathComponents);
-            $prependRelativePath =Mage::getBaseUrl('skin'). $skinPath . "/fake/";
-            Mage::log($prependRelativePath,null,'k.log');
+            if(DS != '/') {
+                $prependRelativePath = Mage::getBaseUrl('skin') . $skinPath . "/fake/";
+            }else{
+                $prependRelativePath = Mage::getBaseUrl('skin') . $skinPath . "/";
+            }
+            
         }
 
         //we might be on windows but instructions in layout updates use / as directory separator
