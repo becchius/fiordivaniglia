@@ -10,7 +10,7 @@ class Zab_Courrier_Model_Carrier_Courrier  extends Mage_Shipping_Model_Carrier_T
     implements Mage_Shipping_Model_Carrier_Interface
 {
 
-    protected $_code = 'courier';
+    protected $_code = 'courrier';
 
 
 
@@ -122,7 +122,7 @@ class Zab_Courrier_Model_Carrier_Courrier  extends Mage_Shipping_Model_Carrier_T
             }
         } else {
             $error = $this->_getModel('shipping/rate_result_error');
-            $error->setCarrier('courier');
+            $error->setCarrier('courrier');
             $error->setCarrierTitle($this->getConfigData('title'));
             $error->setErrorMessage($this->getConfigData('specificerrmsg'));
             $result->append($error);
@@ -145,7 +145,7 @@ class Zab_Courrier_Model_Carrier_Courrier  extends Mage_Shipping_Model_Carrier_T
     protected function _getMethod($methodCode,$methodName,$price){
         $method = Mage::getModel('shipping/rate_result_method');
 
-        $method->setCarrier('courier');
+        $method->setCarrier('courrier');
         $method->setCarrierTitle($this->getConfigData('title'));
 
         $method->setMethod($methodCode);
