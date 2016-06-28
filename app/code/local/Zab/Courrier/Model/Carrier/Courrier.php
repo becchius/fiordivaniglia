@@ -6,7 +6,7 @@
  * Date: 09/09/2015
  * Time: 10:44
  */
-class Sevenlike_Shipping_Model_Carrier_Slcarrier  extends Mage_Shipping_Model_Carrier_Tablerate
+class Zab_Courrier_Model_Carrier_Courrier  extends Mage_Shipping_Model_Carrier_Tablerate
     implements Mage_Shipping_Model_Carrier_Interface
 {
 
