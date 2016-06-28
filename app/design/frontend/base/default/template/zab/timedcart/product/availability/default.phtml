@@ -35,33 +35,44 @@
     <?php else: ?>
         <?php if($_product->isAvailable()):?>
             <?php $status = Mage::helper('zab_timedcart')->getProductStatus($_product);
-                    if($status['status']==Zab_Timedcart_Model_Timedcart_Item::RESERVATION_STATUS_RESERVED):?>
-                        <p class="availability reserved">
-                            <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
-                            <span class="value"><?php echo $this->helper('zab_timedcart')->__('Reserved') ?></span>
+            if($status['status']==Zab_Timedcart_Model_Timedcart_Item::RESERVATION_STATUS_RESERVED):?>
+                <p class="availability reserved">
+                    <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+                    <span class="value"><?php echo $this->helper('zab_timedcart')->__('Reserved') ?></span>
 
-                        </p>
-                        <p class="message"><?php echo $this->__('Product may return available in: ')?><span id="countdown"></span></p>
-                           <div id="timer"></div>
-                            <script type="text/javascript">
-                                jQuery(document).ready(function() {
+                </p>
+                <p class="message"><?php echo $this->__('Product may return available in: ')?><span id="countdown"></span></p>
+                <div id="timer"></div>
+                <script type="text/javascript">
+                    jQuery(document).ready(function() {
 
-                                    jQuery('#timer').countdown('<?php echo $status['exp_date'];?>', function (event) {
-                                        var a = event.strftime(' %H:%M:%S');
-                                       // console.log(a);
-                                        jQuery('#countdown').text( a);
-                                    }).on('finish.countdown', function(event) {
-                                        document.location.reload();
-                                    });
-                                });
-                            </script>
-                        <?php else:?>
-                        <p class="availability in-cart"><?php echo $this->__('Product is already in your cart')?></p>
-                    <?php endif;?>
+                        jQuery('#timer').countdown('<?php echo $status['exp_date'];?>', function (event) {
+                            var a = event.strftime(' %H:%M:%S');
+                            // console.log(a);
+                            jQuery('#countdown').text( a);
+                        }).on('finish.countdown', function(event) {
+                            document.location.reload();
+                        });
+                    });
+                </script>
+            <?php else:?>
+                <p class="availability in-cart"><?php echo $this->__('Product is already in your cart')?></p>
+            <?php endif;?>
         <?php else:?>
-            <p class="availability out-of-stock">
-                <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
-                <span class="value"><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
-            </p>     <?php endif; ?>
+            <?php $dateAvailable=$this->helper('zab_timedcart')->checkDateAvailable($_product);
+            if($dateAvailable):?>
+                <p class="availability reserved">
+                    <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+                    <span class="value"><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
+                </p>
+                <p class="message"><?php echo sprintf($this->__('Product will be available at %s'),$dateAvailable);?></p>
+
+            <?php else:?>
+                <p class="availability out-of-stock">
+                    <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
+                    <span class="value"><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
+                </p>
+            <?php endif;?>
     <?php endif; ?>
+<?php endif; ?>
 <?php endif; ?>

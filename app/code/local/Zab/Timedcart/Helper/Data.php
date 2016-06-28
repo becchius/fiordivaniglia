@@ -69,4 +69,22 @@ class Zab_Timedcart_Helper_Data extends Mage_Core_Helper_Abstract {
         }
         return false;
     }
+    
+    public function checkDateAvailable($_product){
+        if($_product->isSalable()|| $_product->isAvailable()){
+            return true;
+        }
+        if(!$_product->getDateAvailable()){
+            return false;
+        }
+        $now = time();
+        $av = strtotime($_product->getDateAvailable());
+        if($av < $now){
+            return false;
+        }
+        $date = new DateTime($_product->getDateAvailable(),new DateTimeZone('UTC'));
+        $date->setTimezone(new DateTimeZone( Mage::app()->getStore()->getConfig('general/locale/timezone')));
+        $toRet =$date->format('d/m/Y H:i');
+        return $toRet;
+    }
 }
