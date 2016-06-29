@@ -168,9 +168,7 @@ class Mage_Shipping_Model_Resource_Carrier_Tablerate extends Mage_Core_Model_Res
             $select->where('condition_name = :condition_name');
             $select->where('condition_value <= :condition_value');
         }
-Mage::log($select->__toString());
-        Mage::log($bind);
-        $result = $adapter->fetchRow($select, $bind);
+       $result = $adapter->fetchRow($select, $bind);
         // Normalize destination zip code
         if ($result && $result['dest_zip'] == '*') {
             $result['dest_zip'] = '';
