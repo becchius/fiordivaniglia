@@ -1003,9 +1003,7 @@ a.button:hover {
         min-height: 40px;
         padding-top: (40px - $f-size-xxs) / 2;
         padding-bottom: (40px - $f-size-xxs) / 2;
-        background-image: url('../images/demo-logo.png');
-        background-position: left;
-        background-repeat: no-repeat;
+        background: none;
     }
 
     p {
