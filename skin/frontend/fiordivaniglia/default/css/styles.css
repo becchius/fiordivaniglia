@@ -1549,9 +1549,7 @@ a.button:hover {
   min-height: 40px;
   padding-top: 14.5px;
   padding-bottom: 14.5px;
-  background-image: url("../images/demo-logo.png");
-  background-position: left;
-  background-repeat: no-repeat;
+  background: none;
 }
 .global-site-notice p {
   margin-bottom: 0;
