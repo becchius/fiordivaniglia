@@ -211,15 +211,16 @@
                         </div>
                     </div>
                 </li>
+                <li class="fields">
+                    <div class="privacy-box">
+                        <input type="checkbox" class="checkbox required-entry" id="is_subscribed_privacy_bottom" value="1" title="Privacy" name="is_subscribed_privacy">
+                        <label for="is_subscribed_privacy_bottom"><?php echo sprintf($this->__('I read the <a href="%s" class="%s" >privacy policy</a>'),"/privacy.html","js_modal");?></label>
+                    </div>
+                </li>
                 <?php echo $this->getChildHtml('form.additional.info'); ?>
             </ul>
         </div>
-        <div class="fieldset">
-            <div class="privacy-box">
-                <input type="checkbox" class="checkbox required-entry" id="is_subscribed_privacy_bottom" value="1" title="Privacy" name="is_subscribed_privacy">
-                <label for="is_subscribed_privacy_bottom"><?php echo sprintf($this->__('I read the <a href="%s" class="%s" >privacy policy</a>'),"/privacy.html","js_modal");?></label>
-            </div>
-        </div>
+       
         <div class="buttons-set">
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
             <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="back-link"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
