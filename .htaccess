@@ -144,6 +144,24 @@
     RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
     RewriteRule .* - [L,R=405]
 
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+
+        ############################################
+        # X-Content-Type-Options: nosniff disable content-type sniffing on some browsers.
+        Header set X-Content-Type-Options: nosniff
+
+        ############################################
+        # This header forces to enables the Cross-site scripting (XSS) filter in browsers (if disabled)
+        BrowserMatch \bMSIE\s8 ie8
+        Header set X-XSS-Protection: "1; mode=block" env=!ie8
+        <filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+        Header set Cache-Control "max-age=604800, public"
+        </filesMatch>
+
+    </IfModule>
+</IfModule>
+
 ############################################
 ## redirect for mobile user agents
 
@@ -178,7 +196,26 @@
     AddDefaultCharset Off
     #AddDefaultCharset UTF-8
 
+<IfModule mod_expires.c>
 
+############################################
+## Add default Expires header
+## http://developer.yahoo.com/performance/rules.html#expires
+
+   ExpiresActive On
+   ExpiresByType image/jpg "access 1 month"
+   ExpiresByType image/jpeg "access 1 month"
+   ExpiresByType image/gif "access 1 month"
+   ExpiresByType image/png "access 1 month"
+   ExpiresByType text/css "access 1 week"
+   ExpiresByType text/html "access 1 hour"
+   ExpiresByType application/pdf "access 1 month"
+   ExpiresByType text/x-javascript "access 1 week"
+   ExpiresByType application/x-shockwave-flash "access 1 month"
+   ExpiresByType image/x-icon "access 1 month"
+   ExpiresDefault "access 1 month"
+
+</IfModule>
 
 ############################################
 ## By default allow all access
@@ -226,20 +263,5 @@
     </Files>
 
 <IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/jpg "access 1 month"
-ExpiresByType image/jpeg "access 1 month"
-ExpiresByType image/gif "access 1 month"
-ExpiresByType image/png "access 1 month"
-ExpiresByType text/css "access 1 week"
-ExpiresByType text/html "access 1 hour"
-ExpiresByType application/pdf "access 1 month"
-ExpiresByType text/x-javascript "access 1 week"
-ExpiresByType application/x-shockwave-flash "access 1 month"
-ExpiresByType image/x-icon "access 1 month"
-ExpiresDefault "access 1 month"
-</IfModule>
 
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
-Header set Cache-Control "max-age=604800, public"
-</filesMatch>
+</IfModule>
